@@ -1,3 +1,18 @@
+#usersInput {
+    padding: 4px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+#usersInput::placeholder {
+    font-style: italic;
+}
+ 
 #usersInput, #addTaskBtn {
     width: 30%;
+}
+
+#taskListDiv {
+    max-height: 40vh;
+    margin-bottom: 10px;
 }
