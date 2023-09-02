@@ -14,10 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
     importantBtn.innerHTML = '<i class="fa-solid fa-circle-exclamation fa-xl"></i>';
     
     let addTaskBtn = document.getElementById("addTaskBtn");
+    // Add task btn "click" event listener.
+    addTaskBtn.addEventListener("click", addTask);
     
     let taskListDiv = document.getElementById("taskListDiv");
 
-    addTaskBtn.addEventListener("click", function () {
+    // Add task function.
+    function addTask () {
         taskNameElement.innerHTML = input.value;
         // Create individual task row, containing features.
         let taskRowUl = document.createElement("ul");
@@ -25,5 +28,5 @@ document.addEventListener("DOMContentLoaded", function () {
         taskListDiv.append(taskRowUl);
         input.focus();
         input.value = "";
-    });
+    };
 });
