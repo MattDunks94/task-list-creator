@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         input.value = "";
     };
 
-    // Enter keypress event listener for adding tasks.
+    // Keypress event listener for adding tasks via "Enter" key.
     input.addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
             addTaskBtn.click();
