@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Focus on input element on page load.
     input.focus();
 
-
     let addTaskBtn = document.getElementById("addTaskBtn");
     // Adding addTask function to btn.
     addTaskBtn.addEventListener("click", addTask);
@@ -14,49 +13,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add task function.
     function addTask() {
-
+        // Creating all li elements.
         let [taskNameElement, priorityElement, doneElement, removeElement] = [
             document.createElement("li"),
             document.createElement("li"),
             document.createElement("li"),
             document.createElement("li")
         ];
-        // Task Name Element.
-        // let taskNameElement = document.createElement("li");
-        taskNameElement.innerText = input.value;
-        taskNameElement.classList.add("text-truncate", "list-group-item", "w-25");
 
-        // Priority Element.
-        // let priorityElement = document.createElement("li");
-        // Important Btn
-        let importantBtn = document.createElement("button");
-        importantBtn.innerHTML = '<i class="fa-solid fa-circle-exclamation fa-xl"></i>';
+        // Removing li element borders and adding bootstrap classes to each li element.
+        [taskNameElement, priorityElement, doneElement, removeElement].forEach(
+            (element) => {
+                element.style.border = "none";
+                element.classList.add("list-group-item", "w-25");
+            }
+        );
+
+        // Task Name Element.
+        taskNameElement.innerText = input.value;
+        taskNameElement.classList.add("text-truncate");
+
+        // Create required buttons.
+        let [upBtn, importantBtn, downBtn, doneBtn, removeBtn] = [
+            document.createElement("button"),
+            document.createElement("button"),
+            document.createElement("button"),
+            document.createElement("button"),
+            document.createElement("button")
+        ];
+
         importantBtn.classList.add("mx-lg-4", "mx-4", "red-btn");
-        // Up Btn.
-        let upBtn = document.createElement("button");
-        upBtn.innerHTML = '<i class="fa-regular fa-square-caret-up fa-xl" style="color: #388eff;"></i>';
-        // Down Btn.
-        let downBtn = document.createElement("button");
-        downBtn.innerHTML = '<i class="fa-regular fa-square-caret-down fa-xl" style="color: #388eff;"></i>';
+        // Priority li element btns innerHTML, fontawesome icons.
+        [upBtn.innerHTML, importantBtn.innerHTML, downBtn.innerHTML] = [
+            '<i class="fa-regular fa-square-caret-up fa-xl" style="color: #388eff;"></i>',
+            '<i class="fa-solid fa-circle-exclamation fa-xl"></i>',
+            '<i class="fa-regular fa-square-caret-down fa-xl" style="color: #388eff;"></i>'
+        ]; 
+
+        // Adding bootstrap classes to each element.
         [upBtn, importantBtn, downBtn].forEach((button) => {
             button.classList.add("btn", "p-0");
         });
+
+        // Priority element
         priorityElement.append(upBtn, importantBtn, downBtn);
-        priorityElement.classList.add("list-group-item", "w-25", "px-0");
+        priorityElement.classList.add("px-0");
 
-        // Done & Remove btns.
-        let [doneBtn, removeBtn] = [
-            document.createElement("button"),
-            document.createElement("button"),
-        ];
-
-        doneBtn.classList.add("btn", "btn-sm", "btn-success", "w-75"); 
-        removeBtn.classList.add("btn", "btn-sm", "btn-danger", "w-75"); 
+        // Adding bootstrap classes to both done & remove btns.
+        doneBtn.classList.add("btn", "btn-sm", "btn-success", "w-75");
+        removeBtn.classList.add("btn", "btn-sm", "btn-danger", "w-75");
+        // Done & remove btns innerText value.
         [doneBtn.innerText, removeBtn.innerText] = ["Done", "Remove"];
-        doneElement.append(doneBtn);
-        removeElement.append(removeBtn);
-        doneElement.classList.add("list-group-item", "w-25");
-        removeElement.classList.add("list-group-item", "w-25");
+        // Appending both btns to their respective li element.
+        [doneElement.append(doneBtn), removeElement.append(removeBtn)];
 
         // Create individual task row, containing features.
         let taskRowUl = document.createElement("ul");
