@@ -77,6 +77,20 @@ document.addEventListener("DOMContentLoaded", function () {
         taskListDiv.append(taskRowUl);
         input.focus();
         input.value = "";
+
+        // upBtn click event listener, containing moveTaskUp function.
+        upBtn.addEventListener("click", function () {
+            if (taskRowUl != taskListDiv.firstChild) {
+                moveTaskUp(taskListDiv, taskRowUl);
+            };
+        });
+
+        // downBtn click event listener, containing moveTaskDown function.
+        downBtn.addEventListener("click", function () {
+            if (taskRowUl != taskListDiv.lastChild) {
+                moveTaskDown(taskListDiv, taskRowUl);
+            };
+        });
     };
 
     // Enter keypress event listener for adding tasks.
@@ -89,5 +103,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Removes Task.
     function removeTask() {
         this.closest("ul").remove();
+    };
+
+    // Move task up list.
+    function moveTaskUp (list, task) {
+        list.insertBefore(task, task.previousSibling);
+    };
+
+    // Move task down.
+    function moveTaskDown (list, task) {
+        list.insertBefore(task.nextElementSibling, task);
     };
 });
