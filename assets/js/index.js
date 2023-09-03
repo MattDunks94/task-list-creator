@@ -79,6 +79,13 @@ document.addEventListener("DOMContentLoaded", function () {
         input.value = "";
     };
 
+    // Enter keypress event listener for adding tasks.
+    input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            addTaskBtn.click();
+        };
+    });
+
     // Removes Task.
     function removeTask() {
         this.closest("ul").remove();
