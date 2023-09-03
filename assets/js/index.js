@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             '<i class="fa-regular fa-square-caret-up fa-xl" style="color: #388eff;"></i>',
             '<i class="fa-solid fa-circle-exclamation fa-xl"></i>',
             '<i class="fa-regular fa-square-caret-down fa-xl" style="color: #388eff;"></i>'
-        ]; 
+        ];
 
         // Adding bootstrap classes to each element.
         [upBtn, importantBtn, downBtn].forEach((button) => {
@@ -58,6 +58,22 @@ document.addEventListener("DOMContentLoaded", function () {
         // Priority element
         priorityElement.append(upBtn, importantBtn, downBtn);
         priorityElement.classList.add("px-0");
+
+        // upBtn click event listener, containing moveTaskUp function.
+        upBtn.addEventListener("click", function () {
+            if (taskRowUl != taskListDiv.firstElementChild) {
+                moveTaskUp(taskListDiv, taskRowUl);
+            };
+            input.focus();
+        });
+
+        // downBtn click event listener, containing moveTaskDown function.
+        downBtn.addEventListener("click", function () {
+            if (taskRowUl !== taskListDiv.lastElementChild) {
+                moveTaskDown(taskListDiv, taskRowUl);
+            };
+            input.focus();
+        });
 
         // Adding bootstrap classes to both done & remove btns.
         doneBtn.classList.add("btn", "btn-sm", "btn-success", "w-75");
@@ -77,20 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
         taskListDiv.append(taskRowUl);
         input.focus();
         input.value = "";
-
-        // upBtn click event listener, containing moveTaskUp function.
-        upBtn.addEventListener("click", function () {
-            if (taskRowUl != taskListDiv.firstChild) {
-                moveTaskUp(taskListDiv, taskRowUl);
-            };
-        });
-
-        // downBtn click event listener, containing moveTaskDown function.
-        downBtn.addEventListener("click", function () {
-            if (taskRowUl != taskListDiv.lastChild) {
-                moveTaskDown(taskListDiv, taskRowUl);
-            };
-        });
     };
 
     // Enter keypress event listener for adding tasks.
@@ -106,12 +108,12 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Move task up list.
-    function moveTaskUp (list, task) {
+    function moveTaskUp(list, task) {
         list.insertBefore(task, task.previousSibling);
     };
 
     // Move task down.
-    function moveTaskDown (list, task) {
+    function moveTaskDown(list, task) {
         list.insertBefore(task.nextElementSibling, task);
     };
 });
