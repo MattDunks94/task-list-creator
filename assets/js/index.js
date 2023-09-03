@@ -67,6 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Appending both btns to their respective li element.
         [doneElement.append(doneBtn), removeElement.append(removeBtn)];
 
+        // Adding removeTask function, click event to removeBtn.
+        removeBtn.addEventListener("click", removeTask);
+
         // Create individual task row, containing features.
         let taskRowUl = document.createElement("ul");
         taskRowUl.classList.add("list-group", "list-group-horizontal", "mt-2");
@@ -74,5 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
         taskListDiv.append(taskRowUl);
         input.focus();
         input.value = "";
+    };
+
+    // Removes Task.
+    function removeTask() {
+        this.closest("ul").remove();
     };
 });
