@@ -20,3 +20,15 @@
 .red-btn i {
     color: red;
 }
+
+.done-task {
+    text-decoration: line-through;
+}
+
+.border-left-green {
+    border-left: 1.5px solid rgb(44, 165, 74);
+}
+
+.invisible-border-left {
+    border-left: 1.5px solid #ffffff00;
+}
