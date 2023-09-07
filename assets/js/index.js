@@ -21,13 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
             document.createElement("li")
         ];
 
-        // Adding custom list-item class and bootstrap class to each element.
-        [taskNameElement, priorityElement, doneElement, removeElement].forEach(
-            (element) => {
-                element.classList.add("list-item", "w-25");
-            }
-        );
-
         // Create required buttons.
         let [upBtn, importantBtn, downBtn, doneBtn, removeBtn] = [
             document.createElement("button"),
@@ -36,6 +29,19 @@ document.addEventListener("DOMContentLoaded", function () {
             document.createElement("button"),
             document.createElement("button")
         ];
+        
+        // Adding custom list-item class and bootstrap class to each element.
+        [taskNameElement, priorityElement, doneElement, removeElement].forEach(
+            (element) => {
+                element.classList.add("list-item", "w-25");
+            }
+        );
+
+        // Checking input value, display alert if empty.
+        if (input.value === "" || input.value === " ") {
+            alert("nope");
+            rowUl.remove();
+        };
 
         // Task Name Element.
         taskNameElement.innerText = input.value;
