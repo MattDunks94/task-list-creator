@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         [taskNameElement, priorityElement, doneElement, removeElement].forEach(
             (element) => {
                 element.style.border = "none";
+                element.style.borderRadius = 0;
                 element.classList.add("list-group-item", "w-25");
             }
         );
@@ -61,16 +62,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // upBtn click event listener, containing moveTaskUp function.
         upBtn.addEventListener("click", function () {
-            if (taskRowUl != taskListDiv.firstElementChild) {
-                moveTaskUp(taskListDiv, taskRowUl);
+            if (rowUl != taskListDiv.firstElementChild) {
+                moveTaskUp(taskListDiv, rowUl);
             };
             input.focus();
         });
 
         // downBtn click event listener, containing moveTaskDown function.
         downBtn.addEventListener("click", function () {
-            if (taskRowUl !== taskListDiv.lastElementChild) {
-                moveTaskDown(taskListDiv, taskRowUl);
+            if (rowUl !== taskListDiv.lastElementChild) {
+                moveTaskDown(taskListDiv, rowUl);
             };
             input.focus();
         });
@@ -83,14 +84,20 @@ document.addEventListener("DOMContentLoaded", function () {
         // Appending both btns to their respective li element.
         [doneElement.append(doneBtn), removeElement.append(removeBtn)];
 
+        doneBtn.addEventListener("click", function () {
+            this.closest("ul").classList.toggle("border-left-green");
+            this.closest("ul").classList.toggle("invisible-border-left");
+            taskNameElement.classList.toggle("done-task");
+        });
+
         // Adding removeTask function, click event to removeBtn.
         removeBtn.addEventListener("click", removeTask);
 
         // Create individual task row, containing features.
-        let taskRowUl = document.createElement("ul");
-        taskRowUl.classList.add("list-group", "list-group-horizontal", "mt-2");
-        taskRowUl.append(taskNameElement, priorityElement, doneElement, removeElement);
-        taskListDiv.append(taskRowUl);
+        let rowUl = document.createElement("ul");
+        rowUl.classList.add("list-group", "list-group-horizontal", "mt-2", "invisible-border-left");
+        rowUl.append(taskNameElement, priorityElement, doneElement, removeElement);
+        taskListDiv.append(rowUl);
         input.focus();
         input.value = "";
     };
