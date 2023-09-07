@@ -21,7 +21,16 @@
     color: red;
 }
 
+.opacity i {
+    opacity: 0.3;
+}
+
+.invisible-border-left {
+    border-left: 1.5px solid #ffffff00;
+}
+
 .done-task {
+    background-color: rgb(44, 165, 74, 0.3);
     text-decoration: line-through;
 }
 
@@ -29,6 +38,20 @@
     border-left: 1.5px solid rgb(44, 165, 74);
 }
 
-.invisible-border-left {
-    border-left: 1.5px solid #ffffff00;
+.important-task {
+    color: red;
+    background-color: #ff000030;
 }
+
+.border-left-red {
+    border-left: 1.5px solid red;
+}
+
+
+/* Custom class, unable to overide bootstrap list-group-item class. */
+.list-item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+}
+
