@@ -21,12 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.createElement("li")
         ];
 
-        // Removing li element borders and adding bootstrap classes to each li element.
+        // Adding custom list-item class and bootstrap class to each element.
         [taskNameElement, priorityElement, doneElement, removeElement].forEach(
             (element) => {
-                element.style.border = "none";
-                element.style.borderRadius = 0;
-                element.classList.add("list-group-item", "w-25");
+                element.classList.add("list-item", "w-25");
             }
         );
 
@@ -60,6 +58,22 @@ document.addEventListener("DOMContentLoaded", function () {
         priorityElement.append(upBtn, importantBtn, downBtn);
         priorityElement.classList.add("px-0");
 
+        importantBtn.classList.add("opacity");
+
+        // importantBtn click event.
+        importantBtn.addEventListener("click", function () {
+            this.classList.toggle("opacity");
+            taskNameElement.classList.toggle("important-task");
+            this.closest("ul").classList.toggle("border-left-red");
+            removeBtn.classList.toggle("disabled");
+            // Adding/removing click event if class doesn't/does exist.
+            if (removeBtn.classList.contains("disabled") === false) {
+                removeBtn.addEventListener("click", removeTask);
+            } else {
+                removeBtn.removeEventListener("click", removeTask);
+            };
+        });
+
         // upBtn click event listener, containing moveTaskUp function.
         upBtn.addEventListener("click", function () {
             if (rowUl != taskListDiv.firstElementChild) {
@@ -84,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Appending both btns to their respective li element.
         [doneElement.append(doneBtn), removeElement.append(removeBtn)];
 
+        // doneBtn click event.
         doneBtn.addEventListener("click", function () {
             this.closest("ul").classList.toggle("border-left-green");
             this.closest("ul").classList.toggle("invisible-border-left");
