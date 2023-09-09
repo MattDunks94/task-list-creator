@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
         </button>
     </div>`;
 
+    let taskArray = [];
+
 
     // Add task function.
     function addTask() {
