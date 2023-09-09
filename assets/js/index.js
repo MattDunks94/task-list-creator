@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </button>
     </div>`;
 
-    let taskArray = [];
-
+    let arrayOfTasks = [];
 
     // Add task function.
     function addTask() {
@@ -63,6 +62,16 @@ document.addEventListener("DOMContentLoaded", function () {
         // Task Name Element.
         taskNameElement.innerText = input.value;
         taskNameElement.classList.add("text-truncate");
+
+        // Checking input value, display alert if empty.
+        if (input.value === "" || input.value === " ") {
+            alertBox.innerHTML = emptyTaskAlert;
+        };
+        
+        // Set 3s timeout for alert box display.
+        setTimeout(() => {
+            alertBox.innerHTML = "";
+        }, 3000);
 
         // Priority element
         priorityElement.append(upBtn, importantBtn, downBtn);
@@ -147,15 +156,8 @@ document.addEventListener("DOMContentLoaded", function () {
         input.focus();
         input.value = "";
 
-        // Checking input value, display alert if empty.
-        if (input.value === "" || input.value === " ") {
-            alertBox.innerHTML = emptyTaskAlert;
-        };
-
-
-        setTimeout(() => {
-            alertBox.remove();
-        }, 3000);
+        arrayOfTasks.push(rowUl);
+        console.log(arrayOfTasks);
     };
 
     // Keypress event listener for adding tasks via "Enter" key.
