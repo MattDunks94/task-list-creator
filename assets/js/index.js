@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (input.value === "" || input.value === " ") {
             alertBox.innerHTML = emptyTaskAlert;
         };
-        
+
         // Set 3s timeout for alert box display.
         setTimeout(() => {
             alertBox.innerHTML = "";
