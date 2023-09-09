@@ -11,6 +11,27 @@ document.addEventListener("DOMContentLoaded", function () {
     // Task List Div.
     let taskListDiv = document.getElementById("taskListDiv");
 
+    let alertBox = document.getElementById("alertBox");
+
+    // Bootstrap Alerts.
+    // Emtpy input value alert.
+    let emptyTaskAlert = `
+    <div class="alert alert-info alert-dismissible fade show w-75 mx-auto mt-2 text-center" role="alert">
+        No task added! Please enter a task.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>`;
+    // Task duplicate alert.
+    let duplicateAlert = `
+    <div class="alert alert-warning alert-dismissible fade show  w-75 mx-auto mt-2 text-center" role="alert">
+        Task already exists!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>`;
+
+
     // Add task function.
     function addTask() {
         // Creating all li elements.
@@ -29,19 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
             document.createElement("button"),
             document.createElement("button")
         ];
-        
+
         // Adding custom list-item class and bootstrap class to each element.
         [taskNameElement, priorityElement, doneElement, removeElement].forEach(
             (element) => {
                 element.classList.add("list-item", "w-25");
             }
         );
-
-        // Checking input value, display alert if empty.
-        if (input.value === "" || input.value === " ") {
-            alert("nope");
-            rowUl.remove();
-        };
 
         // Task Name Element.
         taskNameElement.innerText = input.value;
@@ -76,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 removeBtn.removeEventListener("click", removeTask);
             };
-            doneBtn.addEventListener("click", function() {
+            doneBtn.addEventListener("click", function () {
                 taskNameElement.classList.toggle("important-task");
                 rowUl.classList.toggle("border-left-red");
             });
@@ -122,13 +137,23 @@ document.addEventListener("DOMContentLoaded", function () {
         // Adding removeTask function, click event to removeBtn.
         removeBtn.addEventListener("click", removeTask);
 
-        // Create individual task row, containing features.
+        // Create individual task row, containing list elements.
         let rowUl = document.createElement("ul");
         rowUl.classList.add("list-group", "list-group-horizontal", "mt-2", "invisible-border-left");
         rowUl.append(taskNameElement, priorityElement, doneElement, removeElement);
         taskListDiv.append(rowUl);
         input.focus();
         input.value = "";
+
+        // Checking input value, display alert if empty.
+        if (input.value === "" || input.value === " ") {
+            alertBox.innerHTML = emptyTaskAlert;
+        };
+
+
+        setTimeout(() => {
+            alertBox.remove();
+        }, 3000);
     };
 
     // Keypress event listener for adding tasks via "Enter" key.
