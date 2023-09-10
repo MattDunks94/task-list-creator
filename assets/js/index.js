@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>`;
 
     let arrayOfTasks = [];
+    let uniqueTasks = [];
 
     // Add task function.
     function addTask() {
@@ -56,7 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
         let rowUl = document.createElement("ul");
         rowUl.classList.add("list-group", "list-group-horizontal", "mt-2", "invisible-border-left");
         rowUl.append(taskNameElement, priorityElement, doneElement, removeElement);
-        taskListDiv.prepend(rowUl);
+
+        // Prepending tasks to taskList div. Recent task appears top of list.
+        // taskListDiv.prepend(rowUl);
 
         // Adding custom list-item class and bootstrap class to each element.
         [taskNameElement, priorityElement, doneElement, removeElement].forEach(
@@ -150,16 +153,35 @@ document.addEventListener("DOMContentLoaded", function () {
             rowUl.remove();
         };
 
+        // Pushing task name to array for comparison reasons, apart from empty values.
+        if (input.value !== "" && input.value != " ") {
+            arrayOfTasks.push(taskNameElement.innerText);
+        };
+
+        arrayOfTasks.forEach((task) => {
+            if (!uniqueTasks.includes(task)) {
+                uniqueTasks.push(task);
+                taskListDiv.prepend(rowUl);
+            };
+        });
+
+        if (arrayOfTasks.length > uniqueTasks.length) {
+            alertBox.innerHTML = duplicateAlert;
+            arrayOfTasks.pop();
+        };
+
         // Set 3s timeout for alert box display.
         setTimeout(() => {
             alertBox.innerHTML = "";
         }, 3000);
 
-        input.focus();
+        // Reset input value.
         input.value = "";
+        // Refocus input after every addBtn click event.
+        input.focus();
 
-        arrayOfTasks.push(rowUl);
         console.log(arrayOfTasks);
+        console.log(uniqueTasks);
     };
 
     // Keypress event listener for adding tasks via "Enter" key.
