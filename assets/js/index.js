@@ -52,6 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
             document.createElement("button")
         ];
 
+        // Create individual task row, containing list elements.
+        let rowUl = document.createElement("ul");
+        rowUl.classList.add("list-group", "list-group-horizontal", "mt-2", "invisible-border-left");
+        rowUl.append(taskNameElement, priorityElement, doneElement, removeElement);
+        taskListDiv.prepend(rowUl);
+
         // Adding custom list-item class and bootstrap class to each element.
         [taskNameElement, priorityElement, doneElement, removeElement].forEach(
             (element) => {
@@ -62,16 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Task Name Element.
         taskNameElement.innerText = input.value;
         taskNameElement.classList.add("text-truncate");
-
-        // Checking input value, display alert if empty.
-        if (input.value === "" || input.value === " ") {
-            alertBox.innerHTML = emptyTaskAlert;
-        };
-
-        // Set 3s timeout for alert box display.
-        setTimeout(() => {
-            alertBox.innerHTML = "";
-        }, 3000);
 
         // Priority element
         priorityElement.append(upBtn, importantBtn, downBtn);
@@ -148,11 +144,17 @@ document.addEventListener("DOMContentLoaded", function () {
         // Adding removeTask function, click event to removeBtn.
         removeBtn.addEventListener("click", removeTask);
 
-        // Create individual task row, containing list elements.
-        let rowUl = document.createElement("ul");
-        rowUl.classList.add("list-group", "list-group-horizontal", "mt-2", "invisible-border-left");
-        rowUl.append(taskNameElement, priorityElement, doneElement, removeElement);
-        taskListDiv.append(rowUl);
+        // Checking input value, display alert if empty.
+        if (input.value === "" || input.value === " ") {
+            alertBox.innerHTML = emptyTaskAlert;
+            rowUl.remove();
+        };
+
+        // Set 3s timeout for alert box display.
+        setTimeout(() => {
+            alertBox.innerHTML = "";
+        }, 3000);
+
         input.focus();
         input.value = "";
 
@@ -170,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Removes Task.
     function removeTask() {
         this.closest("ul").remove();
+        input.focus();
     };
 
     // Move task up list.
