@@ -24,7 +24,34 @@
 </head>
 
 <body>
+    <!-- Alert Box Div -->
     <div id="alertBox"></div>
+    <!-- Help Info NavBar -->
+    <div class="row">
+        <div id="helpInfo" class="col-12 mt-3">
+            <nav class="navbar-expand-lg">
+                <!-- Menu Toggler Btn -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fa-solid fa-bars" style="color: #000000;"></i></span>
+                </button>
+                <div id="navbarToggler" class="collapse navbar-collapse">
+                    <div class="col-3">
+                        <h5 class="text-center">Add Tasks <i class="fa-solid fa-chevron-right fa-xs"></i></h5>
+                    </div>
+                    <div class="col-3">
+                        <h5 class="text-center">Remove Tasks <i class="fa-solid fa-chevron-right fa-xs"></i></h5>
+                    </div>
+                    <div class="col-3">
+                        <h5 class="text-center">Completed Tasks <i class="fa-solid fa-chevron-right fa-xs"></i></h5>
+                    </div>
+                    <div class="col-3">
+                        <h5 class="text-center">Task Priority <i class="fa-solid fa-chevron-right fa-xs"></i></h5>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
     <!-- Heading -->
     <h1 class="text-center mt-3">My Task List</h1>
     <!-- Task Input -->
@@ -35,7 +62,8 @@
     </div>
     <div class="row">
         <div class="col-12 m-auto text-center">
-            <button id="addTaskBtn" class="btn btn-primary" aria-label="Add Task Button">Add Task <i class="fa-solid fa-plus" style="color: #ffffff;"></i></button>
+            <button id="addTaskBtn" class="btn btn-primary" aria-label="Add Task Button">Add Task <i
+                    class="fa-solid fa-plus" style="color: #ffffff;"></i></button>
         </div>
     </div>
     <!-- Task List Table Headers -->
