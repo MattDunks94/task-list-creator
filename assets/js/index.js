@@ -11,12 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Task List Div.
     let taskListDiv = document.getElementById("taskListDiv");
 
+    // Alert Box Div
     let alertBox = document.getElementById("alertBox");
+
+    let taskCounter = document.getElementById("taskCounter");
+
+    let tableHeaders = document.getElementById("tableHeaders");
 
     // Bootstrap Alerts.
     // Emtpy input value alert.
     let emptyTaskAlert = `
-    <div class="alert alert-info alert-dismissible fade show w-75 mx-auto mt-2 text-center" role="alert">
+    <div class="alert alert-info alert-dismissible fade show w-75 mx-auto mt-2 text-center position-absolute" role="alert">
         No task added! Please enter a task.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -175,6 +180,12 @@ document.addEventListener("DOMContentLoaded", function () {
             alertBox.innerHTML = "";
         }, 3000);
 
+        if (taskListDiv.children.length > 0) {
+            taskCounter.classList.remove("d-none");
+            taskCounter.firstElementChild.innerText = taskListDiv.children.length;
+            tableHeaders.parentElement.classList.remove("d-none")
+        };
+
         // Reset input value.
         input.value = "";
         // Refocus input after every addBtn click event.
@@ -194,6 +205,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Removes Task.
     function removeTask() {
         this.closest("ul").remove();
+        taskCounter.firstElementChild.innerText = taskListDiv.children.length;
+        if (taskListDiv.children.length === 0) {
+            tableHeaders.parentElement.classList.add("d-none");
+            taskCounter.classList.add("d-none");
+        };
         input.focus();
     };
 
