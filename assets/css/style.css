@@ -63,3 +63,26 @@
     padding: 0.75rem 1.25rem;
 }
 
+.down-fade {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    padding: 10px, 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    animation: downFade ease 0.6s;
+}
+
+/* ANIMATIONS */
+
+@keyframes downFade {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    } 
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
