@@ -151,6 +151,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Adding removeTask function, click event to removeBtn.
         removeBtn.addEventListener("click", removeTask);
+        removeBtn.addEventListener("click", function () {
+            for (let i = arrayOfTasks.length - 1; i >= 0; i--) {
+                if (arrayOfTasks[i] === taskNameElement.innerText) {
+                    uniqueTasks.splice(i, 1);
+                    arrayOfTasks.splice(i, 1);
+                };
+            };
+        })
 
         // Checking input value, display alert if empty.
         if (input.value === "" || input.value === " ") {
