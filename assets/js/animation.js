@@ -14,15 +14,20 @@ containersArray.forEach((container) => {
     });
 });
 
-// let chevrons = document.querySelectorAll(".fa-chevron-right");
-// let chevronsArray = [...chevrons];
+let helpHeadings = document.querySelectorAll(".help-heading");
+let  = [...helpHeadings];
 
-let h5 = document.querySelectorAll("h5");
-let h5Array = [...h5];
-
-h5Array.forEach((h) => {
-    h.addEventListener("click", function () {
-        this.firstElementChild.classList.toggle("rotate-90");
+helpHeadings.forEach((heading) => {
+    heading.addEventListener("click", function () {
+        if (!this.firstElementChild.classList.contains("rotate-90")) {
+            this.firstElementChild.classList.toggle("rotate-90");
+        };
+        if (this.firstElementChild.classList.contains("reverse-90") === true) {
+            this.firstElementChild.classList.toggle("reverse-90");
+        };
+        this.addEventListener("click", function () {
+            this.firstElementChild.classList.toggle("reverse-90");
+            this.firstElementChild.classList.toggle("rotate-90");
+        });
     });
 });
-
