@@ -5,12 +5,7 @@ let containersArray = [...infoContainers];
 
 // Adding click event to each container.
 containersArray.forEach((container) => {
-    let chevrons = document.querySelectorAll(".fa-chevron-right");
-    let chevronsArray = [...chevrons];
     container.addEventListener("click", function () {
-        chevronsArray.forEach((chevron) => {
-            chevron.classList.add("rotate-90");
-        });
         if (!container.children[1].classList.contains("d-none")) {
             container.children[1].classList.add("d-none");
         } else {
@@ -18,3 +13,16 @@ containersArray.forEach((container) => {
         };
     });
 });
+
+// let chevrons = document.querySelectorAll(".fa-chevron-right");
+// let chevronsArray = [...chevrons];
+
+let h5 = document.querySelectorAll("h5");
+let h5Array = [...h5];
+
+h5Array.forEach((h) => {
+    h.addEventListener("click", function () {
+        this.firstElementChild.classList.toggle("rotate-90");
+    });
+});
+

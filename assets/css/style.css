@@ -63,6 +63,11 @@
     padding: 0.75rem 1.25rem;
 }
 
+#priority {
+    height: 27vh;
+    width: fit-content;
+}
+
 .down-fade {
     display: block;
     position: absolute;

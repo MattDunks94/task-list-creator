@@ -46,12 +46,38 @@
                     </div>
                     <div class="col-3 float-left info-container">
                         <h5 class="text-center">Remove Tasks <i class="fa-solid fa-chevron-right fa-xs"></i></h5>
+                        <ul class="d-none">
+                            <li>To remove tasks from your task list, click on the <button
+                                    class="btn btn-sm btn-danger">Remove</button> button.</li>
+                            <li>If the selected task is important the <button
+                                    class="btn btn-sm btn-danger">Remove</button>
+                                button will be disabled (See Task Priority for more). </li>
+                        </ul>
                     </div>
                     <div class="col-3 float-left info-container">
                         <h5 class="text-center">Completed Tasks <i class="fa-solid fa-chevron-right fa-xs"></i></h5>
+                        <ul class="d-none">
+                            <li>If you've completed a task and want to mark it down as done, click the <button
+                                    class="btn btn-sm btn-success">Done</button> button.</li>
+                            <li>When a task is completed, the task name will go green. This indicates a completed task.
+                            </li>
+                        </ul>
                     </div>
                     <div class="col-3 float-left info-container">
                         <h5 class="text-center">Task Priority <i class="fa-solid fa-chevron-right fa-xs"></i></h5>
+                        <ul id="priority" class="overflow-auto d-none">
+                            <li>If your task is important you can click on the <i
+                                class="fa-solid fa-circle-exclamation fa-xl" style="color: red;"></i> button.</li>
+                        <li>When clicked, the <button class="btn btn-sm btn-danger disabled">Remove</button> button
+                            will
+                            be disabled. This stops your task from being removed
+                            from your task list by accident.</li>
+                        <li>Important tasks name will go red. This indicates an important task.</li>
+                        <li>You can also reorder your tasks by using the <i
+                                class="fa-regular fa-square-caret-up fa-xl" style="color: #388eff;"></i> and
+                            <i class="fa-regular fa-square-caret-down fa-xl" style="color: #388eff;"></i> buttons.
+                        </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
