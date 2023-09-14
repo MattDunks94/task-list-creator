@@ -151,6 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Adding removeTask function, click event to removeBtn.
         removeBtn.addEventListener("click", removeTask);
+        // Adding second click event to remove task names from arrays.
         removeBtn.addEventListener("click", function () {
             for (let i = arrayOfTasks.length - 1; i >= 0; i--) {
                 if (arrayOfTasks[i] === taskNameElement.innerText) {
@@ -171,6 +172,12 @@ document.addEventListener("DOMContentLoaded", function () {
             arrayOfTasks.push(taskNameElement.innerText);
         };
 
+        /**
+         * Iterating through arrayOfTasks.
+         * For each entry, if entry is not in unique array, push entry
+         * to unique array and prepend rowUl element.
+         * This avoids any duplicated tasks.
+         */
         arrayOfTasks.forEach((task) => {
             if (!uniqueTasks.includes(task)) {
                 uniqueTasks.push(task);
@@ -178,6 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
             };
         });
 
+        // If arrays are different length display duplicateAlert and remove entry.
         if (arrayOfTasks.length > uniqueTasks.length) {
             alertBox.innerHTML = duplicateAlert;
             arrayOfTasks.pop();
@@ -188,6 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alertBox.innerHTML = "";
         }, 3000);
 
+        // Table Headers, Task counter display and innerText.
         if (taskListDiv.children.length > 0) {
             taskCounter.classList.remove("d-none");
             taskCounter.firstElementChild.innerText = taskListDiv.children.length;
@@ -210,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
     });
 
-    // Removes Task.
+    // Removes Task Function.
     function removeTask() {
         this.closest("ul").remove();
         taskCounter.firstElementChild.innerText = taskListDiv.children.length;
