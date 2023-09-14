@@ -86,3 +86,21 @@
     }
 }
 
+@keyframes rotate90 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes reverse90 {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
