@@ -73,6 +73,16 @@
     animation: downFade ease 0.6s;
 }
 
+.rotate-90 {
+    animation: rotate90 ease 0.15s;
+    transform: rotate(90deg);
+}
+
+.reverse-90 {
+    animation: reverse90 ease 0.15s;
+    transform: rotate(0);
+}
+
 /* ANIMATIONS */
 
 @keyframes downFade {
