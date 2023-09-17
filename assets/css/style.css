@@ -128,6 +128,7 @@
     }
 }
 
+/* For screens 540px wide */
 @media (max-width: 540px) {
     body {
         font-size: 1.4rem;
@@ -170,6 +171,7 @@
     }
 }
 
+/* For screens 414px wide */
 @media (max-width: 414px) {
     #usersInput::placeholder {
         font-size: 70%;
@@ -184,6 +186,7 @@
     }
 }
 
+/* For screens 375px wide */
 @media (max-width: 375px) {
     #taskListDiv {
         max-height: 60vh;
@@ -202,12 +205,14 @@
     }
 }
 
+/* For screens 360px wide */
 @media (max-width: 360px) {
     #taskListDiv {
         max-height: 65vh;
     }
 }
 
+/* For screens 280px wide */
 @media (max-width: 280px) {
     body {
         font-size: 1.2rem;
