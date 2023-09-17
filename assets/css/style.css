@@ -118,3 +118,54 @@
         transform: rotate(0);
     }
 }
+
+/* MEDIA QUERIES */
+
+/* For screens 912px wide */
+@media (max-width: 912px) {
+    #taskListDiv {
+        max-height: 70vh;
+    }
+}
+
+@media (max-width: 540px) {
+    body {
+        font-size: 1.4rem;
+    }
+
+    #usersInput, #addTaskBtn {
+        width: 50%;
+    }
+
+    #usersInput::placeholder {
+        font-size: 85%;
+    }
+
+    #tableHeaders {
+        display: none;
+    }
+
+    #taskListDiv {
+        max-height: 60vh;
+    }
+
+    .border-left-green, .border-left-red, .invisible-border-left {
+        border-left: none;
+    }
+
+    .w-48 {
+        width: 48%;
+    }
+
+    #taskListDiv ul {
+        border-bottom: 2px solid rgb(220, 220, 220);
+    }
+
+    .alert {
+        font-size: 0.9rem;
+    }
+
+    .close {
+        font-size: 1.3rem;
+    }
+}
