@@ -159,7 +159,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     arrayOfTasks.splice(i, 1);
                 };
             };
-        })
+            // Display 'No tasks added!' when taskListDiv has no children.
+            if (taskListDiv.children.length === 0) {
+                document.getElementById("noTasks").classList.remove("d-none");
+            };
+        });
 
         // Checking input value, display alert if empty.
         if (input.value === "" || input.value === " ") {
@@ -196,13 +200,14 @@ document.addEventListener("DOMContentLoaded", function () {
             alertBox.innerHTML = "";
         }, 3000);
 
-        // Table Headers, Task counter display and innerText.
+        // Table Headers, Task counter, display and innerText of elements.
         if (taskListDiv.children.length > 0) {
             taskCounter.classList.remove("d-none");
             taskCounter.firstElementChild.innerText = taskListDiv.children.length;
-            tableHeaders.parentElement.classList.remove("d-none")
+            tableHeaders.parentElement.classList.remove("d-none");
+            document.getElementById("noTasks").classList.add("d-none");
         };
-
+        
         // Reset input value.
         input.value = "";
         // Refocus input after every addBtn click event.
