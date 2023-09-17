@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>`;
     // Task duplicate alert.
     let duplicateAlert = `
-    <div class="alert alert-warning alert-dismissible fade show  w-75 mx-auto mt-2 text-center" role="alert">
+    <div class="alert alert-warning alert-dismissible fade show  w-75 mx-auto mt-2 text-center position-absolute" role="alert">
         Task already exists!
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
