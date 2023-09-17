@@ -165,7 +165,71 @@
         font-size: 0.9rem;
     }
 
-    .close {
+    .alert :nth-child(1) {
         font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 414px) {
+    #usersInput::placeholder {
+        font-size: 70%;
+    }
+
+    #taskListDiv {
+        max-height: 70vh;
+    }
+
+    .alert {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 375px) {
+    #taskListDiv {
+        max-height: 60vh;
+    }
+
+    #usersInput::placeholder {
+        font-size: 60%;
+    }
+
+    #h1 {
+        font-size: 2.2rem;
+    }
+
+    .alert {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    #taskListDiv {
+        max-height: 65vh;
+    }
+}
+
+@media (max-width: 280px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    #h1 {
+        font-size: 1.9rem;
+    }
+
+    #taskListDiv {
+        max-height: 60vh;
+    }
+
+    #usersInput, #addTaskBtn {
+        width: 70%;
+    }
+
+    .alert {
+        font-size: 0.8rem;
+    }
+
+    .alert :nth-child(1) {
+        font-size: 1.5rem;
     }
 }
