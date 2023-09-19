@@ -6,6 +6,11 @@
     opacity: 1;
 }
 
+#helpInfo kbd {
+    background-color: lightgray;
+    color: #000;
+}
+
 #usersInput {
     padding: 4px 10px;
     border: 1px solid rgba(0, 0, 0, 0.4);
