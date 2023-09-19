@@ -27,9 +27,11 @@ window.addEventListener("resize", function () {
         if (this.window.innerWidth < 750) {
             heading.parentElement.classList.replace("float-left", "m-auto");
             heading.parentElement.classList.replace("col-3", "col-12");
+            heading.nextElementSibling.classList.add("position-relative");
         } else {
             heading.parentElement.classList.replace("m-auto", "float-left");
             heading.parentElement.classList.replace("col-12", "col-3");
+            heading.nextElementSibling.classList.remove("position-relative");
         };
     });
 });
@@ -38,5 +40,6 @@ if (window.matchMedia("(max-width: 750px)").matches) {
     helpHeadings.forEach((heading) => {
         heading.parentElement.classList.replace("float-left", "m-auto");
         heading.parentElement.classList.replace("col-3", "col-12");
+        heading.nextElementSibling.classList.add("position-relative");
     });
 };
