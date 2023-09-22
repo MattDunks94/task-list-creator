@@ -1,3 +1,4 @@
+import { mediaQueries } from "../js/media-queries.js";
 document.addEventListener("DOMContentLoaded", function () {
 
     let input = document.getElementById("usersInput");
@@ -210,6 +211,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Refocus input after every addBtn click event.
         input.focus();
 
+        mediaQueries();
+        
         console.log(arrayOfTasks);
         console.log(uniqueTasks);
     };
