@@ -1,12 +1,8 @@
-let addTaskBtn = document.getElementById("addTaskBtn")
-let taskListDiv = document.getElementById("taskListDiv");
-let tasks = taskListDiv.children;
-
-addTaskBtn.addEventListener("click", function () {
+export function mediaQueries() {
+    let taskListDiv = document.getElementById("taskListDiv");
+    let tasks = taskListDiv.children;
     let btns = document.querySelectorAll("#taskListDiv button");
     let btnsArray = [...btns];
-    console.log(btnsArray);
-    
     // Media Queries for window resizing events.
     window.addEventListener("resize", function () {
         if (this.window.innerWidth < 540) {
@@ -46,4 +42,4 @@ addTaskBtn.addEventListener("click", function () {
             btn.classList.replace("w-75", "w-100");
         });
     };
-});
+};
