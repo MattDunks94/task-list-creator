@@ -3,6 +3,10 @@ let taskListDiv = document.getElementById("taskListDiv");
 let tasks = taskListDiv.children;
 
 addTaskBtn.addEventListener("click", function () {
+    let btns = document.querySelectorAll("#taskListDiv button");
+    let btnsArray = [...btns];
+    console.log(btnsArray);
+    
     // Media Queries for window resizing events.
     window.addEventListener("resize", function () {
         if (this.window.innerWidth < 540) {
@@ -14,6 +18,9 @@ addTaskBtn.addEventListener("click", function () {
                     element.classList.remove("px-0");
                 });
             };
+            btnsArray.forEach((btn) => {
+                btn.classList.replace("w-75", "w-100");
+            });
         } else if (this.innerWidth >= 540) {
             for (let task = 0; task < tasks.length; task++) {
                 tasks[task].classList.add("list-group-horizontal");
@@ -25,4 +32,18 @@ addTaskBtn.addEventListener("click", function () {
             };
         }
     });
+
+    if (window.matchMedia("(max-width: 540px)").matches) {
+        for (let task = 0; task < tasks.length; task++) {
+            tasks[task].classList.remove("list-group-horizontal");
+            tasks[task].classList.replace("mt-2", "py-3");
+            tasks[task].childNodes.forEach((element) => {
+                element.classList.remove("w-25");
+                element.classList.remove("px-0");
+            });
+        };
+        btnsArray.forEach((btn) => {
+            btn.classList.replace("w-75", "w-100");
+        });
+    };
 });
