@@ -63,9 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         rowUl.classList.add("list-group", "list-group-horizontal", "mt-2", "invisible-border-left");
         rowUl.append(taskNameElement, priorityElement, doneElement, removeElement);
 
-        // Prepending tasks to taskList div. Recent task appears top of list.
-        // taskListDiv.prepend(rowUl);
-
         // Adding custom list-item class and bootstrap class to each element.
         [taskNameElement, priorityElement, doneElement, removeElement].forEach(
             (element) => {
