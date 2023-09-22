@@ -1,10 +1,8 @@
 let addTaskBtn = document.getElementById("addTaskBtn")
 let taskListDiv = document.getElementById("taskListDiv");
 let tasks = taskListDiv.children;
-let taskFeatures = document.querySelectorAll("#taskListDiv li");
-let features = [...taskFeatures];
+
 addTaskBtn.addEventListener("click", function () {
-    console.log(features);
     // Media Queries for window resizing events.
     window.addEventListener("resize", function () {
         if (this.window.innerWidth < 540) {
