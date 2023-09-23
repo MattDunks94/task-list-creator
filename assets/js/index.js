@@ -210,11 +210,8 @@ document.addEventListener("DOMContentLoaded", function () {
         input.value = "";
         // Refocus input after every addBtn click event.
         input.focus();
-
+        // From media-queries.js.
         mediaQueries();
-        
-        console.log(arrayOfTasks);
-        console.log(uniqueTasks);
     };
 
     // Keypress event listener for adding tasks via "Enter" key.
