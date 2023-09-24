@@ -16,7 +16,12 @@ export function mediaQueries() {
             };
             btnsArray.forEach((btn) => {
                 btn.classList.replace("w-75", "w-100");
+                btn.classList.remove("btn-sm");
             });
+            // upBtn
+            btnsArray[0].classList.add("float-left");
+            // downBtn
+            btnsArray[2].classList.add("float-right");
         } else if (this.innerWidth >= 540) {
             for (let task = 0; task < tasks.length; task++) {
                 tasks[task].classList.add("list-group-horizontal");
@@ -26,7 +31,15 @@ export function mediaQueries() {
                     element.classList.add("px-0");
                 });
             };
-        }
+            btnsArray.forEach((btn) => {
+                btn.classList.replace("w-100", "w-75");
+                btn.classList.add("btn-sm");
+            });
+            // upBtn
+            btnsArray[0].classList.remove("float-left");
+            // downBtn
+            btnsArray[2].classList.remove("float-right");
+        };
     });
 
     if (window.matchMedia("(max-width: 540px)").matches) {
@@ -40,6 +53,11 @@ export function mediaQueries() {
         };
         btnsArray.forEach((btn) => {
             btn.classList.replace("w-75", "w-100");
+            btn.classList.remove("btn-sm");
         });
+        // upBtn
+        btnsArray[0].classList.add("float-left");
+        // downBtn
+        btnsArray[2].classList.add("float-right");
     };
 };
