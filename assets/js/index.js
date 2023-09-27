@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Alert Box Div
     let alertBox = document.getElementById("alertBox");
-
+    // Task Counter.
     let taskCounter = document.getElementById("taskCounter");
-
+    // Task list table headers.
     let tableHeaders = document.getElementById("tableHeaders");
 
-    // Bootstrap Alerts.
+    // BOOTSTRAP ALERTS:
     // Emtpy input value alert.
     let emptyTaskAlert = `
     <div class="alert alert-info alert-dismissible fade show w-75 mx-auto mt-2 text-center position-absolute" role="alert">
@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </button>
     </div>`;
 
+    // Array for tasks names.
     let arrayOfTasks = [];
+    // Array for unique task names only.
     let uniqueTasks = [];
 
     // Add task function.
