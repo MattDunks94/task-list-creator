@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Array for tasks names.
     let arrayOfTasks = [];
-    // Array for unique task names only.
+    // Array for unique task names only, no duplicates.
     let uniqueTasks = [];
 
     // Add task function.
