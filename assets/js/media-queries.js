@@ -1,13 +1,18 @@
 export function mediaQueries() {
+    // Task List Div.
     let taskListDiv = document.getElementById("taskListDiv");
+    // All Tasks (ul elements).
     let tasks = taskListDiv.children;
     // Collect all btns.
     let btns = document.querySelectorAll("#taskListDiv button");
+    // Convert 'btns' into html collection.
     let btnsArray = [...btns];
+    // Assign each btn to variable. (apart from importantBtn).
     let upBtn = btnsArray[0];
     let downBtn = btnsArray[2];
     let doneBtn = btnsArray[3];
     let removeBtn = btnsArray[4];
+
     // Media Query for window resizing below width of 540px.
     window.addEventListener("resize", function () {
         if (this.window.innerWidth < 540) {
