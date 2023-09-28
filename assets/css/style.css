@@ -209,7 +209,7 @@
     }
 
     #taskListDiv {
-        max-height: 60vh;
+        max-height: 50vh;
     }
 
     .alert {
@@ -224,7 +224,7 @@
 /* For screens 375px wide */
 @media (max-width: 375px) {
     #taskListDiv {
-        max-height: 50vh;
+        max-height: 48vh;
     }
 
     #usersInput::placeholder {
@@ -243,7 +243,7 @@
 /* For screens 360px wide */
 @media (max-width: 360px) {
     #taskListDiv {
-        max-height: 65vh;
+        max-height: 44vh;
     }
 }
 
