@@ -1,4 +1,6 @@
-import { mediaQueries } from "../js/media-queries.js";
+import {
+    mediaQueries
+} from "../js/media-queries.js";
 document.addEventListener("DOMContentLoaded", function () {
 
     let input = document.getElementById("usersInput");
@@ -207,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
             tableHeaders.parentElement.classList.remove("d-none");
             document.getElementById("noTasks").classList.add("d-none");
         };
-        
+
         // Reset input value.
         input.value = "";
         // Refocus input after every addBtn click event.
@@ -243,4 +245,22 @@ document.addEventListener("DOMContentLoaded", function () {
     function moveTaskDown(list, task) {
         list.insertBefore(task.nextElementSibling, task);
     };
+
+    let bttBtn = document.getElementById("bttBtn");
+
+    // When taskListDiv is scrolled, display bttBtn, otherwise d-none.
+    taskListDiv.addEventListener("scroll", function () {
+        if (taskListDiv.scrollTop > 550) {
+            bttBtn.parentElement.classList.replace("d-none", "fade-in");
+        } else if (taskListDiv.scrollTop < 550) {
+            bttBtn.parentElement.classList.replace("fade-in", "d-none");
+        };
+    });
+    // bttBtn click event, returns user back to top of taskListDiv.
+    bttBtn.addEventListener("click", function () {
+        taskListDiv.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 });
