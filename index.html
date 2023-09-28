@@ -125,14 +125,17 @@
     <!-- Task List -->
     <div class="row">
         <div class="col-10 m-auto text-center">
-            <div id="taskListDiv" class="overflow-auto">
+            <div id="taskListDiv" class="overflow-auto mb-3">
+            </div>
+            <div class="col-10 text-center m-auto d-none">
+                <a id="bttBtn" class="btn m-auto text-center">
+                    Back to top <i class="fa-solid fa-chevron-up ml-2" style="color: #388eff;"></i>
+                </a>
             </div>
             <hr>
         </div>
     </div>
-    <div id="bttBtn" class="text-center d-flex">
-        <i class="fa-solid fa-chevron-up m-auto" style="color: #388eff;"></i>
-    </div>
+    <!-- Save / Load -->
     <div class="row">
         <div id="saveLoadDiv" class="col-10 text-center m-auto">
             <button id="saveBtn" class="btn btn-primary w-25 mb-3">Save <i class="fa-solid fa-floppy-disk"
@@ -144,6 +147,16 @@
     <!-- Index.js -->
     <script src="/assets/js/index.js" type="module"></script>
     <script src="/assets/js/nav.js"></script>
+    <script>
+        let bttBtn = document.getElementById("bttBtn");
+        let taskListDiv = document.getElementById("taskListDiv");
+        bttBtn.addEventListener("click", function () {
+            taskListDiv.scroll({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+        });
+    </script>
 </body>
 
 </html>
