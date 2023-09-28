@@ -36,13 +36,13 @@
 }
 
 #bttBtn {
-    height: 50px;
-    width: 50px;
-    background-color: rgba(255, 255, 255, 0.736);
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
     position: fixed;
-    bottom: 72px;
-    right: 65px;
-    border: #969696 solid 1px;
+    bottom: 5vh;
+    right: 2.5vw;
+    border: #388eff7e solid 1px;
     border-radius: 5px;
 }
 
