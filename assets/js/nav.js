@@ -26,12 +26,14 @@ window.addEventListener("resize", function () {
     helpHeadings.forEach((heading) => {
         if (this.window.innerWidth < 750) {
             heading.parentElement.classList.replace("float-left", "m-auto");
-            heading.parentElement.classList.replace("col-3", "col-12");
+            heading.parentElement.classList.replace("col-3", "col-11");
             heading.nextElementSibling.classList.add("position-relative");
+            heading.classList.add("mb-2");
         } else {
             heading.parentElement.classList.replace("m-auto", "float-left");
-            heading.parentElement.classList.replace("col-12", "col-3");
+            heading.parentElement.classList.replace("col-11", "col-3");
             heading.nextElementSibling.classList.remove("position-relative");
+            heading.classList.remove("mb-2");
         };
     });
 });
@@ -39,7 +41,8 @@ window.addEventListener("resize", function () {
 if (window.matchMedia("(max-width: 750px)").matches) {
     helpHeadings.forEach((heading) => {
         heading.parentElement.classList.replace("float-left", "m-auto");
-        heading.parentElement.classList.replace("col-3", "col-12");
+        heading.parentElement.classList.replace("col-3", "col-11");
         heading.nextElementSibling.classList.add("position-relative");
+        heading.classList.add("mb-2");
     });
 };
