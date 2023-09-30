@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // When taskListDiv is scrolled, display bttBtn, otherwise d-none.
     taskListDiv.addEventListener("scroll", function () {
-        if (taskListDiv.scrollTop > 550) {
+        if (taskListDiv.scrollTop > 500) {
             bttBtn.parentElement.classList.replace("d-none", "fade-in");
         } else if (taskListDiv.scrollTop < 550) {
             bttBtn.parentElement.classList.replace("fade-in", "d-none");

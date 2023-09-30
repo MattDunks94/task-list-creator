@@ -15,40 +15,45 @@ export function mediaQueries() {
 
     // Media Query for window resizing below width of 540px.
     window.addEventListener("resize", function () {
-        if (this.window.innerWidth < 540) {
+        if (this.window.innerWidth <= 540) {
             for (let task = 0; task < tasks.length; task++) {
                 tasks[task].classList.remove("list-group-horizontal");
                 tasks[task].classList.replace("mt-2", "py-3");
                 tasks[task].childNodes.forEach((element) => {
                     element.classList.remove("w-25");
-                    element.classList.remove("px-0");
                 });
+                tasks[task].children[1].classList.remove("px-0");
             };
+            // upBtn
+            upBtn.classList.add("float-left");
+            upBtn.classList.add("btn-lg");
+            // downBtn
+            downBtn.classList.add("float-right");
+            downBtn.classList.add("btn-lg");
             btnsArray.forEach((btn) => {
                 btn.classList.replace("w-75", "w-100");
                 btn.classList.remove("btn-sm");
             });
-            // upBtn
-            upBtn.classList.add("float-left");
-            // downBtn
-            downBtn.classList.add("float-right");
-        } else if (this.innerWidth >= 540) {
+        } else {
             for (let task = 0; task < tasks.length; task++) {
                 tasks[task].classList.add("list-group-horizontal");
                 tasks[task].classList.replace("py-3", "mt-2");
                 tasks[task].childNodes.forEach((element) => {
                     element.classList.add("w-25");
-                    element.classList.add("px-0");
                 });
+                tasks[task].children[1].classList.add("px-0");
             };
-            btnsArray.forEach((btn) => {
-                btn.classList.replace("w-100", "w-75");
-                btn.classList.add("btn-sm");
-            });
+            doneBtn.classList.add("btn-sm");
+            removeBtn.classList.add("btn-sm");
             // upBtn
             upBtn.classList.remove("float-left");
+            upBtn.classList.remove("btn-lg");
             // downBtn
             downBtn.classList.remove("float-right");
+            downBtn.classList.remove("btn-lg");
+            btnsArray.forEach((btn) => {
+                btn.classList.replace("w-100", "w-75");
+            });
         };
     });
 
@@ -59,22 +64,24 @@ export function mediaQueries() {
             tasks[task].classList.replace("mt-2", "py-3");
             tasks[task].childNodes.forEach((element) => {
                 element.classList.remove("w-25");
-                element.classList.remove("px-0");
             });
+            tasks[task].children[1].classList.remove("px-0");
+            upBtn.classList.add("btn-lg");
+            downBtn.classList.add("btn-lg");
         };
-        btnsArray.forEach((btn) => {
-            btn.classList.replace("w-75", "w-100");
-            btn.classList.remove("btn-sm");
-        });
         // upBtn
         upBtn.classList.add("float-left");
         // downBtn
         downBtn.classList.add("float-right");
+        btnsArray.forEach((btn) => {
+            btn.classList.replace("w-75", "w-100");
+            btn.classList.remove("btn-sm");
+        });
     };
 
     // Media Query for window resizing below width of 430px.
     window.addEventListener("resize", function () {
-        if (this.innerWidth < 430) {
+        if (this.innerWidth <= 430) {
             doneBtn.classList.replace("w-100", "w-48");
             removeBtn.classList.replace("w-100", "w-48");
             // Change innerHTML to 'done' and 'remove' btns to FA icons.
@@ -88,10 +95,10 @@ export function mediaQueries() {
             doneBtn.parentElement.nextElementSibling.classList.add("d-none");
         } else {
             doneBtn.classList.replace("w-48", "w-100");
+            removeBtn.classList.replace("w-48", "w-100");
             // Reinstating the original innerHTML to btns.
             doneBtn.innerHTML = "Done";
             removeBtn.innerHTML = "Remove";
-            removeBtn.classList.replace("w-48", "w-100");
             doneBtn.classList.remove("float-left");
             removeBtn.classList.remove("float-right");
             // Re-appending removeBtn to original li element.
