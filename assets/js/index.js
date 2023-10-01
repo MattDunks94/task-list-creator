@@ -221,8 +221,6 @@ document.addEventListener("DOMContentLoaded", function () {
         input.focus();
         // From media-queries.js.
         mediaQueries();
-
-        console.log(arrayOfTasks);
     };
 
     // Keypress event listener for adding tasks via "Enter" key.
