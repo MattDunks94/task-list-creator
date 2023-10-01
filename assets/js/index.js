@@ -1,6 +1,11 @@
 import {
     mediaQueries
 } from "../js/media-queries.js";
+
+import {
+    arrayOfTasks
+} from "../js/save-load.js";
+
 document.addEventListener("DOMContentLoaded", function () {
 
     let input = document.getElementById("usersInput");
@@ -40,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>`;
 
     // Array for tasks names.
-    let arrayOfTasks = [];
+    // let arrayOfTasks = [];
     // Array for unique task names only, no duplicates.
     let uniqueTasks = [];
 
@@ -216,6 +221,8 @@ document.addEventListener("DOMContentLoaded", function () {
         input.focus();
         // From media-queries.js.
         mediaQueries();
+
+        console.log(arrayOfTasks);
     };
 
     // Keypress event listener for adding tasks via "Enter" key.
