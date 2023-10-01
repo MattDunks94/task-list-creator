@@ -253,6 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
         list.insertBefore(task.nextElementSibling, task);
     };
 
+    // Back to top btn.
     let bttBtn = document.getElementById("bttBtn");
 
     // When taskListDiv is scrolled, display bttBtn, otherwise d-none.
