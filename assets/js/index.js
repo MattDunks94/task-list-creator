@@ -193,6 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!uniqueTasks.includes(task)) {
                 uniqueTasks.push(task);
                 taskListDiv.prepend(rowUl);
+                // Pushing taskListDiv HTML to savedTasks Array.
                 savedTasks.push(taskListDiv.innerHTML);
             };
         });
