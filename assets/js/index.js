@@ -2,6 +2,10 @@ import {
     mediaQueries
 } from "../js/media-queries.js";
 
+import {
+    savedTasks
+} from "../js/save-load.js";
+
 document.addEventListener("DOMContentLoaded", function () {
 
     let input = document.getElementById("usersInput");
@@ -189,6 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!uniqueTasks.includes(task)) {
                 uniqueTasks.push(task);
                 taskListDiv.prepend(rowUl);
+                savedTasks.push(taskListDiv.innerHTML);
             };
         });
 
