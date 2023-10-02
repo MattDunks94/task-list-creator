@@ -3,7 +3,7 @@ import {
 } from "../js/media-queries.js";
 
 import {
-    savedTasks
+    savedTasks, loadTasks
 } from "../js/save-load.js";
 
 document.addEventListener("DOMContentLoaded", function () {
