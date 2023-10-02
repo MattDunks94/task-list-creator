@@ -1,4 +1,4 @@
-export { savedTasks }
+export { savedTasks, loadTasks }
 
 let savedTasks = localStorage.getItem("task-list") ? JSON.parse(localStorage.getItem("task-list")) : [];
 
@@ -13,6 +13,12 @@ let tableHeaders = document.getElementById("tableHeaders");
 saveBtn.addEventListener("click", function () {
     localStorage.setItem("tasks", JSON.stringify(savedTasks));
 });
+
+function loadTasks () {
+    JSON.parse(localStorage.getItem("tasks")).forEach((task) => {
+        taskListDiv.innerHTML = task;
+    });
+};
 
 // loadBtn.addEventListener("click", function () {
 //     JSON.parse(localStorage.getItem("tasks")).forEach((task) => {
