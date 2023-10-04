@@ -1,5 +1,5 @@
 let helpHeadings = document.querySelectorAll(".help-heading");
-let = [...helpHeadings];
+// let = [...helpHeadings];
 // Toggling animation classes for nav elements, icons.
 helpHeadings.forEach((heading) => {
     heading.addEventListener("click", function () {
