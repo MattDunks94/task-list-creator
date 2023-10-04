@@ -3,8 +3,10 @@ import {
 } from "../js/media-queries.js";
 
 import {
-    savedTasks, loadTasks
+    savedTasks
 } from "../js/save-load.js";
+
+export { removeTask, moveTaskUp }
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -232,27 +234,6 @@ document.addEventListener("DOMContentLoaded", function () {
         };
     });
 
-    // Removes Task Function.
-    function removeTask() {
-        this.closest("ul").remove();
-        taskCounter.firstElementChild.innerText = taskListDiv.children.length;
-        if (taskListDiv.children.length === 0) {
-            tableHeaders.parentElement.classList.add("d-none");
-            taskCounter.classList.add("d-none");
-        };
-        input.focus();
-    };
-
-    // Move task up list.
-    function moveTaskUp(list, task) {
-        list.insertBefore(task, task.previousSibling);
-    };
-
-    // Move task down.
-    function moveTaskDown(list, task) {
-        list.insertBefore(task.nextElementSibling, task);
-    };
-
     // Back to top btn.
     let bttBtn = document.getElementById("bttBtn");
 
@@ -272,3 +253,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+ // Removes Task Function.
+ function removeTask() {
+    this.closest("ul").remove();
+    taskCounter.firstElementChild.innerText = taskListDiv.children.length;
+    if (taskListDiv.children.length === 0) {
+        tableHeaders.parentElement.classList.add("d-none");
+        taskCounter.classList.add("d-none");
+    };
+    document.getElementById("usersInput").focus();
+};
+
+// Move task up list.
+function moveTaskUp(list, task) {
+    list.insertBefore(task, task.previousSibling);
+};
+
+// Move task down.
+function moveTaskDown(list, task) {
+    list.insertBefore(task.nextElementSibling, task);
+};
