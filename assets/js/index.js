@@ -5,7 +5,8 @@ import {
 import {
     savedTasks,
     loadBtn, 
-    loadTaskList
+    loadTaskList,
+    saveTaskList
 } from "../js/save-load.js";
 
 import {
@@ -154,12 +155,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (arrayOfTasks[i] === taskNameElement.innerText) {
                     uniqueTasks.splice(i, 1);
                     arrayOfTasks.splice(i, 1);
+                    savedTasks.splice(i, 1);
                 };
             };
             // Display 'No tasks added!' when taskListDiv has no children.
             if (taskListDiv.children.length === 0) {
                 document.getElementById("noTasks").classList.remove("d-none");
             };
+            saveTaskList();
         });
 
         // Checking input value, display alert if empty.
