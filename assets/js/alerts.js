@@ -2,7 +2,8 @@ export {
     emptyTaskAlert,
     duplicateAlert,
     savedTaskAlert,
-    loadedTaskAlert
+    loadedTaskAlert,
+    alertTimeout
 };
 
 // BOOTSTRAP ALERTS:
@@ -39,3 +40,10 @@ let loadedTaskAlert = `
     <span aria-hidden="true">&times;</span>
     </button>
 </div>`;
+
+// Set 3s timeout for alert box display.
+function alertTimeout(box) {
+    setTimeout(() => {
+        box.innerHTML = "";
+    }, 3000);
+}

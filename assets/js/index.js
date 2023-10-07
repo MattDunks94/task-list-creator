@@ -10,7 +10,8 @@ import {
 
 import {
     emptyTaskAlert,
-    duplicateAlert
+    duplicateAlert, 
+    alertTimeout
 } from "../js/alerts.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -193,10 +194,8 @@ document.addEventListener("DOMContentLoaded", function () {
             arrayOfTasks.pop();
         };
 
-        // Set 3s timeout for alert box display.
-        setTimeout(() => {
-            alertBox.innerHTML = "";
-        }, 3000);
+        // Timeout function from 'alerts.js'
+        alertTimeout(alertBox);
 
         // Table Headers, Task counter, display and innerText of elements.
         if (taskListDiv.children.length > 0) {

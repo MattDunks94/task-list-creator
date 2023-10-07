@@ -5,7 +5,8 @@ export {
 }
 import {
     savedTaskAlert,
-    loadedTaskAlert
+    loadedTaskAlert, 
+    alertTimeout
 } from "../js/alerts.js";
 
 let savedTasks = localStorage.getItem("task-list") ? JSON.parse(localStorage.getItem("task-list")) : [];
@@ -19,20 +20,16 @@ saveBtn.addEventListener("click", function () {
     localStorage.setItem("tasks", JSON.stringify(savedTasks));
     alertBox.innerHTML = savedTaskAlert;
     // Set 3s timeout for alert box display.
-    setTimeout(() => {
-        alertBox.innerHTML = "";
-    }, 3000);
+    alertTimeout(alertBox);
 });
 
-// Loads saved localstorage data, renders to the DOM via func() = addTask().
+// Loads saved localstorage data, renders to the DOM via func() = addTask(), displays alert.
 function loadTaskList(input, func, alert) {
     JSON.parse(localStorage.getItem("tasks")).forEach((task) => {
         input.value = task;
         func();
         alert.innerHTML = loadedTaskAlert;
         // Set 3s timeout for alert box display.
-        setTimeout(() => {
-            alertBox.innerHTML = "";
-        }, 3000);
+        alertTimeout(alertBox);
     });
 };
