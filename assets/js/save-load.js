@@ -1,11 +1,12 @@
 export {
     savedTasks,
     loadBtn,
+    saveTaskList,
     loadTaskList
 }
 import {
     savedTaskAlert,
-    loadedTaskAlert, 
+    loadedTaskAlert,
     alertTimeout
 } from "../js/alerts.js";
 
@@ -16,8 +17,13 @@ let loadBtn = document.getElementById("loadBtn");
 let alertBox = document.getElementById("alertBox");
 
 // Saves task list to localstorage, displays alert.
-saveBtn.addEventListener("click", function () {
+function saveTaskList() {
     localStorage.setItem("tasks", JSON.stringify(savedTasks));
+};
+
+// saveBtn click event. Saves task list and displays alert.
+saveBtn.addEventListener("click", function () {
+    saveTaskList();
     alertBox.innerHTML = savedTaskAlert;
     // Set 3s timeout for alert box display.
     alertTimeout(alertBox);
