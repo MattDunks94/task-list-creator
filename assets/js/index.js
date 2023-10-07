@@ -3,10 +3,16 @@ import {
 } from "../js/media-queries.js";
 
 import {
-    savedTasks
+    savedTasks,
+    loadBtn, 
+    loadTaskList
 } from "../js/save-load.js";
 
-export { removeTask, moveTaskUp }
+import {
+    emptyTaskAlert,
+    duplicateAlert,
+    loadedTaskAlert
+} from "../js/alerts.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -27,24 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let taskCounter = document.getElementById("taskCounter");
     // Task list table headers.
     let tableHeaders = document.getElementById("tableHeaders");
-
-    // BOOTSTRAP ALERTS:
-    // Emtpy input value alert.
-    let emptyTaskAlert = `
-    <div class="alert alert-info alert-dismissible fade show w-75 mx-auto mt-2 text-center position-absolute" role="alert">
-        No task added! Please enter a task.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-    </div>`;
-    // Task duplicate alert.
-    let duplicateAlert = `
-    <div class="alert alert-warning alert-dismissible fade show  w-75 mx-auto mt-2 text-center position-absolute" role="alert">
-        Task already exists!
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-    </div>`;
 
     // Array for tasks names.
     let arrayOfTasks = [];
@@ -196,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 uniqueTasks.push(task);
                 taskListDiv.prepend(rowUl);
                 // Pushing taskListDiv HTML to savedTasks Array.
-                savedTasks.push(taskListDiv.innerHTML);
+                savedTasks.push(task);
             };
         });
 
@@ -252,10 +240,15 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: 'smooth'
         });
     });
+
+    // loadBtn click event, loads saved localstorage data. Displays alert.
+    loadBtn.addEventListener("click", function () {
+        loadTaskList(input, addTask, alertBox);
+    });
 });
 
- // Removes Task Function.
- function removeTask() {
+// Removes Task Function.
+function removeTask() {
     this.closest("ul").remove();
     taskCounter.firstElementChild.innerText = taskListDiv.children.length;
     if (taskListDiv.children.length === 0) {
