@@ -10,8 +10,7 @@ import {
 
 import {
     emptyTaskAlert,
-    duplicateAlert,
-    loadedTaskAlert
+    duplicateAlert
 } from "../js/alerts.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -183,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!uniqueTasks.includes(task)) {
                 uniqueTasks.push(task);
                 taskListDiv.prepend(rowUl);
-                // Pushing taskListDiv HTML to savedTasks Array.
+                // Pushing task to savedTasks array.
                 savedTasks.push(task);
             };
         });
