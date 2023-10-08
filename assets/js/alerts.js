@@ -3,6 +3,7 @@ export {
     duplicateAlert,
     savedTaskAlert,
     loadedTaskAlert,
+    noTasksAlert,
     alertTimeout
 };
 
@@ -36,6 +37,14 @@ let savedTaskAlert = `
 let loadedTaskAlert = `
 <div class="alert alert-success alert-dismissible fade show  w-75 mx-auto mt-2 text-center position-absolute" role="alert">
     Successfully loaded your task list!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>`;
+
+let noTasksAlert = `
+<div class="alert alert-warning alert-dismissible fade show  w-75 mx-auto mt-2 text-center position-absolute" role="alert">
+    There are no previously saved tasks! 
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
     </button>
