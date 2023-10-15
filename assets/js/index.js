@@ -7,6 +7,7 @@ import {
     loadBtn, 
     loadTaskList,
     clearBtn,
+    clearTaskList
 } from "../js/save-load.js";
 
 import {
@@ -207,22 +208,6 @@ document.addEventListener("DOMContentLoaded", function () {
             tableHeaders.parentElement.classList.remove("d-none");
             document.getElementById("noTasks").classList.add("d-none");
             clearBtn.classList.remove("disabled");
-            // Clears Task List.
-            clearBtn.addEventListener("click", function () {
-                taskListDiv.childNodes.forEach((ul) => {
-                    ul.remove();
-                });
-                tableHeaders.parentElement.classList.add("d-none");
-                document.getElementById("noTasks").classList.remove("d-none");
-                taskCounter.classList.add("d-none");
-                uniqueTasks.forEach((task) => {
-                    uniqueTasks.pop(task);
-                });
-                arrayOfTasks.forEach((task) => {
-                    arrayOfTasks.pop(task);
-                });
-                localStorage.clear();
-            });
         };
 
         // Reset input value.
