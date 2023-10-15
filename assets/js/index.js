@@ -6,7 +6,7 @@ import {
     savedTasks,
     loadBtn, 
     loadTaskList,
-    saveTaskList
+    clearBtn,
 } from "../js/save-load.js";
 
 import {
@@ -161,8 +161,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // Display 'No tasks added!' when taskListDiv has no children.
             if (taskListDiv.children.length === 0) {
                 document.getElementById("noTasks").classList.remove("d-none");
+                localStorage.clear();
             };
-            saveTaskList();
         });
 
         // Checking input value, display alert if empty.
@@ -206,6 +206,23 @@ document.addEventListener("DOMContentLoaded", function () {
             taskCounter.firstElementChild.innerText = taskListDiv.children.length;
             tableHeaders.parentElement.classList.remove("d-none");
             document.getElementById("noTasks").classList.add("d-none");
+            clearBtn.classList.remove("disabled");
+            // Clears Task List.
+            clearBtn.addEventListener("click", function () {
+                taskListDiv.childNodes.forEach((ul) => {
+                    ul.remove();
+                });
+                tableHeaders.parentElement.classList.add("d-none");
+                document.getElementById("noTasks").classList.remove("d-none");
+                taskCounter.classList.add("d-none");
+                uniqueTasks.forEach((task) => {
+                    uniqueTasks.pop(task);
+                });
+                arrayOfTasks.forEach((task) => {
+                    arrayOfTasks.pop(task);
+                });
+                localStorage.clear();
+            });
         };
 
         // Reset input value.
