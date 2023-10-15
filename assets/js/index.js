@@ -4,7 +4,7 @@ import {
 
 import {
     savedTasks,
-    loadBtn, 
+    loadBtn,
     loadTaskList,
     clearBtn,
     clearTaskList
@@ -12,7 +12,7 @@ import {
 
 import {
     emptyTaskAlert,
-    duplicateAlert, 
+    duplicateAlert,
     alertTimeout
 } from "../js/alerts.js";
 
@@ -244,9 +244,28 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // loadBtn click event, loads saved localstorage data. Displays alert.
-    loadBtn.addEventListener("click", function () {
-        loadTaskList(input, addTask, alertBox);
+    if (!localStorage.getItem("tasks")) {
+        loadBtn.removeEventListener("click", loadTaskList(input, addTask, alertBox));
+    } else {
+        // loadBtn click event, loads saved localstorage data. Displays alert.
+        loadBtn.addEventListener("click", function () {
+            loadTaskList(input, addTask, alertBox);
+        });
+    };
+
+    clearBtn.addEventListener("click", function () {
+        let tasks = document.querySelectorAll("#taskListDiv ul");
+        [...tasks].forEach((task) => {
+            task.remove();
+        });
+        uniqueTasks.forEach((task) => {
+            uniqueTasks.pop(task);
+        });
+        arrayOfTasks.forEach((task) => {
+            arrayOfTasks.pop(task);
+        });
+        localStorage.clear();
+        console.log(localStorage);
     });
 });
 
