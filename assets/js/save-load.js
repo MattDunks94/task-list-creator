@@ -1,8 +1,9 @@
 export {
     savedTasks,
-    loadBtn,
     saveTaskList,
-    loadTaskList
+    loadBtn,
+    loadTaskList,
+    clearBtn
 }
 import {
     savedTaskAlert,
@@ -14,6 +15,7 @@ let savedTasks = localStorage.getItem("task-list") ? JSON.parse(localStorage.get
 
 let saveBtn = document.getElementById("saveBtn");
 let loadBtn = document.getElementById("loadBtn");
+let clearBtn = document.getElementById("clearBtn");
 let alertBox = document.getElementById("alertBox");
 
 // Saves task list to localstorage, displays alert.
