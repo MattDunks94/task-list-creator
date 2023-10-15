@@ -3,7 +3,8 @@ export {
     saveTaskList,
     loadBtn,
     loadTaskList,
-    clearBtn
+    clearBtn,
+    clearTaskList
 }
 import {
     savedTaskAlert,
@@ -40,4 +41,21 @@ function loadTaskList(input, func, alert) {
         // Set 3s timeout for alert box display.
         alertTimeout(alertBox);
     });
+};
+
+// Clears Task List.
+function clearTaskList(list, headers, counter, array1, array2) {
+    list.childNodes.forEach((ul) => {
+        ul.remove();
+    });
+    headers.parentElement.classList.add("d-none");
+    document.getElementById("noTasks").classList.remove("d-none");
+    counter.classList.add("d-none");
+    array1.forEach((task) => {
+        array1.pop(task);
+    });
+    array2.forEach((task) => {
+        array2.pop(task);
+    });
+    localStorage.clear();
 };
