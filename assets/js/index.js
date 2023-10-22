@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    if (!localStorage.getItem("tasks")) {
+    if (!localStorage) {
         loadBtn.removeEventListener("click", loadTaskList(input, addTask, alertBox));
     } else {
         // loadBtn click event, loads saved localstorage data. Displays alert.
@@ -252,20 +252,10 @@ document.addEventListener("DOMContentLoaded", function () {
             loadTaskList(input, addTask, alertBox);
         });
     };
-
+    // Clears Task List.
     clearBtn.addEventListener("click", function () {
-        let tasks = document.querySelectorAll("#taskListDiv ul");
-        [...tasks].forEach((task) => {
-            task.remove();
-        });
-        uniqueTasks.forEach((task) => {
-            uniqueTasks.pop(task);
-        });
-        arrayOfTasks.forEach((task) => {
-            arrayOfTasks.pop(task);
-        });
-        localStorage.clear();
-        console.log(localStorage);
+        clearTaskList(tableHeaders, taskCounter, arrayOfTasks, uniqueTasks);
+        input.focus();
     });
 });
 
