@@ -32,6 +32,8 @@ saveBtn.addEventListener("click", function () {
     alertTimeout(alertBox);
 });
 
+// Loads saved data from localStorage. 
+// Exported this function to index.js so addTask() can be used as callback.
 function loadTaskList(input, callback, alert) {
     let savedData = JSON.parse(localStorage.getItem("tasks"));
     if (localStorage.getItem("tasks")) {
@@ -43,17 +45,6 @@ function loadTaskList(input, callback, alert) {
         };
     };
 };
-
-// Loads saved localstorage data, renders to the DOM via func() = addTask(), displays alert.
-// function loadTaskList(input, callback, alert) {
-//     JSON.parse(localStorage.getItem("tasks")).forEach((task) => {
-//         input.value = task;
-//         callback();
-//         alert.innerHTML = loadedTaskAlert;
-//         // Set 3s timeout for alert box display.
-//         alertTimeout(alertBox);
-//     });
-// };
 
 /**  
  * Clears Task List. 
@@ -70,4 +61,5 @@ function clearTaskList(headers, counter, array1, array2) {
     counter.classList.add("d-none");
     array1.length = 0;
     array2.length = 0;
+    localStorage.clear();
 };
