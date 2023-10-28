@@ -5,15 +5,17 @@ import {
 import {
     savedTasks,
     loadBtn,
-    loadTaskList,
+    // loadTaskList,
     clearBtn,
-    clearTaskList
+    clearTaskList,
+    loadTaskList
 } from "../js/save-load.js";
 
 import {
     emptyTaskAlert,
     duplicateAlert,
-    alertTimeout
+    alertTimeout,
+    loadedTaskAlert
 } from "../js/alerts.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -244,13 +246,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    if (!localStorage) {
-        loadBtn.removeEventListener("click", loadTaskList(input, addTask, alertBox));
-    } else {
-        // loadBtn click event, loads saved localstorage data. Displays alert.
+    /** If item "tasks" exists in localStotage, execute click event function. 
+     * Otherwise remove click event, add class, display alert. 
+     */
+    if (localStorage.getItem("tasks")) {
         loadBtn.addEventListener("click", function () {
             loadTaskList(input, addTask, alertBox);
         });
+    } else {
+        loadBtn.removeEventListener("click", function () {
+            loadTaskList(input, addTask, alertBox);
+        });
+        loadBtn.classList.add("disabled");
     };
     // Clears Task List.
     clearBtn.addEventListener("click", function () {
