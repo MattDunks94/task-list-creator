@@ -50,6 +50,7 @@ function loadTaskList(input, callback, alert) {
  * Clears Task List. 
  * Resets arrayOfTasks and uniqueTasks arrays.
  * Removes, displays elements to the DOM.
+ * Also clears localStorage.
 */
 function clearTaskList(headers, counter, array1, array2) {
     let tasks = document.querySelectorAll("#taskListDiv ul");
