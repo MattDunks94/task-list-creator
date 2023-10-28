@@ -262,6 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clears Task List.
     clearBtn.addEventListener("click", function () {
         clearTaskList(tableHeaders, taskCounter, arrayOfTasks, uniqueTasks);
+        loadBtn.classList.add("disabled");
         input.focus();
     });
 });
