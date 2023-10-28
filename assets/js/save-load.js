@@ -32,16 +32,28 @@ saveBtn.addEventListener("click", function () {
     alertTimeout(alertBox);
 });
 
-// Loads saved localstorage data, renders to the DOM via func() = addTask(), displays alert.
 function loadTaskList(input, callback, alert) {
-    JSON.parse(localStorage.getItem("tasks")).forEach((task) => {
-        input.value = task;
-        callback();
-        alert.innerHTML = loadedTaskAlert;
-        // Set 3s timeout for alert box display.
-        alertTimeout(alertBox);
-    });
+    let savedData = JSON.parse(localStorage.getItem("tasks"));
+    if (localStorage.getItem("tasks")) {
+        for (let task of savedData) {
+            input.value = task;
+            callback();
+            alert.innerHTML = loadedTaskAlert;
+            alertTimeout(alertBox);
+        };
+    };
 };
+
+// Loads saved localstorage data, renders to the DOM via func() = addTask(), displays alert.
+// function loadTaskList(input, callback, alert) {
+//     JSON.parse(localStorage.getItem("tasks")).forEach((task) => {
+//         input.value = task;
+//         callback();
+//         alert.innerHTML = loadedTaskAlert;
+//         // Set 3s timeout for alert box display.
+//         alertTimeout(alertBox);
+//     });
+// };
 
 /**  
  * Clears Task List. 
