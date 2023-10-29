@@ -34,6 +34,7 @@ saveBtn.addEventListener("click", function () {
     loadBtn.classList.remove("disabled");
     loadBtn.addEventListener("click", function () {
         alertBox.innerHTML = loadedTaskAlert;
+        alertTimeout(alertBox);
     });
 });
 
@@ -67,5 +68,6 @@ function clearTaskList(headers, counter, btn) {
     counter.classList.add("d-none");
     btn.classList.add("disabled");
     alertBox.innerHTML = clearedListAlert;
+    alertTimeout(alertBox);
     localStorage.clear();
 };
