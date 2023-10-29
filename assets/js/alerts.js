@@ -4,8 +4,7 @@ export {
     savedTaskAlert,
     loadedTaskAlert,
     noTasksAlert,
-    alertTimeout, 
-    emptyStorageAlert
+    alertTimeout
 };
 
 // BOOTSTRAP ALERTS:
@@ -45,15 +44,7 @@ let loadedTaskAlert = `
 
 let noTasksAlert = `
 <div class="alert alert-warning alert-dismissible fade show  w-75 mx-auto mt-2 text-center position-absolute" role="alert">
-    There are no previously saved tasks! 
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-    </button>
-</div>`;
-
-let emptyStorageAlert = `
-<div class="alert alert-warning alert-dismissible fade show  w-75 mx-auto mt-2 text-center position-absolute" role="alert">
-    There are no saved tasks to load!  
+    There are no previously saved tasks to load! 
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
     </button>
