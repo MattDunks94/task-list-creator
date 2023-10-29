@@ -19,6 +19,7 @@ let saveBtn = document.getElementById("saveBtn");
 let loadBtn = document.getElementById("loadBtn");
 let clearBtn = document.getElementById("clearBtn");
 let alertBox = document.getElementById("alertBox");
+let input = document.getElementById("usersInput");
 
 // Saves task list to localstorage, displays alert.
 function saveTaskList() {
@@ -28,6 +29,7 @@ function saveTaskList() {
 // saveBtn click event. Saves task list and displays alert.
 saveBtn.addEventListener("click", function () {
     saveTaskList();
+    input.focus();
     alertBox.innerHTML = savedTaskAlert;
     // Set 3s timeout for alert box display.
     alertTimeout(alertBox);
