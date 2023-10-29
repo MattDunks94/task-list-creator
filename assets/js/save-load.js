@@ -30,6 +30,7 @@ saveBtn.addEventListener("click", function () {
     alertBox.innerHTML = savedTaskAlert;
     // Set 3s timeout for alert box display.
     alertTimeout(alertBox);
+    loadBtn.classList.remove("disabled");
 });
 
 // Loads saved data from localStorage. 
@@ -52,7 +53,7 @@ function loadTaskList(input, callback, alert) {
  * Removes, displays elements to the DOM.
  * Also clears localStorage.
 */
-function clearTaskList(headers, counter, array1, array2, array3) {
+function clearTaskList(headers, counter, alert) {
     let tasks = document.querySelectorAll("#taskListDiv ul");
     tasks.forEach((task) => {
         task.remove();
@@ -60,6 +61,5 @@ function clearTaskList(headers, counter, array1, array2, array3) {
     headers.parentElement.classList.add("d-none");
     document.getElementById("noTasks").classList.remove("d-none");
     counter.classList.add("d-none");
-    [array1.length, array2.length, array3.length] = [0, 0, 0];
     localStorage.clear();
 };
