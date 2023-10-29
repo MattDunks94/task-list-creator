@@ -266,12 +266,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // CLEAR TASK LIST
     clearBtn.addEventListener("click", function () {
-        clearTaskList(tableHeaders, taskCounter, clearBtn);
-        [arrayOfTasks.length, uniqueTasks.length, savedTasks.length] = [0, 0, 0];
-        loadBtn.classList.add("disabled");
-        loadBtn.addEventListener("click", function () {
-            alertBox.innerHTML = noTasksAlert;
-        });
+        if (taskListDiv.children.length > 0) {
+            clearTaskList(tableHeaders, taskCounter, clearBtn);
+            [arrayOfTasks.length, uniqueTasks.length, savedTasks.length] = [0, 0, 0];
+            loadBtn.classList.add("disabled");
+            loadBtn.addEventListener("click", function () {
+                alertBox.innerHTML = noTasksAlert;
+                alertTimeout(alertBox);
+            });
+        };
         input.focus();
     });
 });
