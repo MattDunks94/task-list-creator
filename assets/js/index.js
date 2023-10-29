@@ -5,7 +5,6 @@ import {
 import {
     savedTasks,
     loadBtn,
-    // loadTaskList,
     clearBtn,
     clearTaskList,
     loadTaskList
@@ -252,11 +251,11 @@ document.addEventListener("DOMContentLoaded", function () {
      */
     if (localStorage.getItem("tasks")) {
         loadBtn.addEventListener("click", function () {
-            loadTaskList(input, addTask, alertBox);
+            loadTaskList(input, addTask);
         });
     } else {
         loadBtn.removeEventListener("click", function () {
-            loadTaskList(input, addTask, alertBox);
+            loadTaskList(input, addTask);
         });
         loadBtn.addEventListener("click", function () {
             alertBox.innerHTML = noTasksAlert;
@@ -267,9 +266,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // CLEAR TASK LIST
     clearBtn.addEventListener("click", function () {
-        clearTaskList(tableHeaders, taskCounter, alertBox);
+        clearTaskList(tableHeaders, taskCounter);
         [arrayOfTasks.length, uniqueTasks.length, savedTasks.length] = [0, 0, 0];
         loadBtn.classList.add("disabled");
+        loadBtn.addEventListener("click", function () {
+            alertBox.innerHTML = noTasksAlert;
+        });
         input.focus();
     });
 });
