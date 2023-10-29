@@ -15,8 +15,7 @@ import {
     emptyTaskAlert,
     duplicateAlert,
     alertTimeout,
-    loadedTaskAlert,
-    emptyStorageAlert
+    noTasksAlert
 } from "../js/alerts.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -260,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
             loadTaskList(input, addTask, alertBox);
         });
         loadBtn.addEventListener("click", function () {
-            alertBox.innerHTML = emptyStorageAlert;
+            alertBox.innerHTML = noTasksAlert;
             alertTimeout(alertBox);
         })
         loadBtn.classList.add("disabled");
