@@ -15,7 +15,8 @@ import {
     emptyTaskAlert,
     duplicateAlert,
     alertTimeout,
-    loadedTaskAlert
+    loadedTaskAlert,
+    emptyStorageAlert
 } from "../js/alerts.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -246,6 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // LOAD TASK LIST
     /** If item "tasks" exists in localStotage, execute click event function. 
      * Otherwise remove click event, add class, display alert. 
      */
@@ -257,13 +259,17 @@ document.addEventListener("DOMContentLoaded", function () {
         loadBtn.removeEventListener("click", function () {
             loadTaskList(input, addTask, alertBox);
         });
+        loadBtn.addEventListener("click", function () {
+            alertBox.innerHTML = emptyStorageAlert;
+            alertTimeout(alertBox);
+        })
         loadBtn.classList.add("disabled");
     };
-    // Clears Task List.
+
+    // CLEAR TASK LIST
     clearBtn.addEventListener("click", function () {
-        clearTaskList(
-            tableHeaders, taskCounter, arrayOfTasks, uniqueTasks, savedTasks
-        );
+        clearTaskList(tableHeaders, taskCounter, alertBox);
+        [arrayOfTasks.length, uniqueTasks.length, savedTasks.length] = [0, 0, 0];
         loadBtn.classList.add("disabled");
         input.focus();
     });
