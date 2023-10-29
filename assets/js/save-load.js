@@ -9,6 +9,7 @@ export {
 import {
     savedTaskAlert,
     loadedTaskAlert,
+    clearedListAlert,
     alertTimeout
 } from "../js/alerts.js";
 
@@ -31,17 +32,20 @@ saveBtn.addEventListener("click", function () {
     // Set 3s timeout for alert box display.
     alertTimeout(alertBox);
     loadBtn.classList.remove("disabled");
+    loadBtn.addEventListener("click", function () {
+        alertBox.innerHTML = loadedTaskAlert;
+    });
 });
 
 // Loads saved data from localStorage. 
 // Exported this function to index.js so addTask() can be used as callback.
-function loadTaskList(input, callback, alert) {
+function loadTaskList(input, callback) {
     let savedData = JSON.parse(localStorage.getItem("tasks"));
     if (localStorage.getItem("tasks")) {
         for (let task of savedData) {
             input.value = task;
             callback();
-            alert.innerHTML = loadedTaskAlert;
+            alertBox.innerHTML = loadedTaskAlert;
             alertTimeout(alertBox);
         };
     };
@@ -53,7 +57,7 @@ function loadTaskList(input, callback, alert) {
  * Removes, displays elements to the DOM.
  * Also clears localStorage.
 */
-function clearTaskList(headers, counter, alert) {
+function clearTaskList(headers, counter, btn) {
     let tasks = document.querySelectorAll("#taskListDiv ul");
     tasks.forEach((task) => {
         task.remove();
@@ -61,5 +65,7 @@ function clearTaskList(headers, counter, alert) {
     headers.parentElement.classList.add("d-none");
     document.getElementById("noTasks").classList.remove("d-none");
     counter.classList.add("d-none");
+    btn.classList.add("disabled");
+    alertBox.innerHTML = clearedListAlert;
     localStorage.clear();
 };
