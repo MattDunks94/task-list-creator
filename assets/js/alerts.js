@@ -4,6 +4,7 @@ export {
     savedTaskAlert,
     loadedTaskAlert,
     noTasksAlert,
+    clearedListAlert,
     alertTimeout
 };
 
@@ -41,7 +42,7 @@ let loadedTaskAlert = `
     <span aria-hidden="true">&times;</span>
     </button>
 </div>`;
-
+// Empty Storage Alert.
 let noTasksAlert = `
 <div class="alert alert-warning alert-dismissible fade show  w-75 mx-auto mt-2 text-center position-absolute" role="alert">
     There are no previously saved tasks to load! 
@@ -49,7 +50,14 @@ let noTasksAlert = `
     <span aria-hidden="true">&times;</span>
     </button>
 </div>`;
-
+// Cleared Task List and Storage.
+let clearedListAlert = `
+<div class="alert alert-success alert-dismissible fade show  w-75 mx-auto mt-2 text-center position-absolute" role="alert">
+    Successfully cleared task list!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>`; 
 // Set 3s timeout for alert box display.
 function alertTimeout(box) {
     setTimeout(() => {
