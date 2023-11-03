@@ -1,4 +1,4 @@
-#helpInfo .fa-question, .help-heading {
+#helpInfo .fa-question, .help-heading, #saveLoad .fa-gears {
     opacity: 0.5;
 }
 
@@ -14,6 +14,10 @@
 #priority {
     height: 27vh;
     width: fit-content;
+}
+
+.alert {
+    z-index: 1;
 }
 
 #usersInput {
