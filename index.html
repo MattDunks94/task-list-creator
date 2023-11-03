@@ -28,7 +28,7 @@
     <div id="alertBox" class="d-flex justify-content-center"></div>
     <!-- Help Info NavBar -->
     <div class="row">
-        <div id="helpInfo" class="col-12 my-3">
+        <div id="helpInfo" class="col-10 my-3">
             <nav>
                 <!-- Menu Toggler Btn -->
                 <button class="navbar-toggler p-0 ml-3" type="button" data-toggle="collapse"
@@ -88,6 +88,31 @@
                 </div>
             </nav>
         </div>
+        <div id="saveLoad" class="col-2 my-3">
+            <!-- Menu Toggler Btn -->
+            <button class="navbar-toggler p-0 mr-3 float-right" type="button" data-toggle="collapse"
+                data-target="#saveLoadToggler" aria-controls="saveLoad" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-gears"></i></span>
+            </button>
+            <div id="saveLoadToggler" class="float-right collapse navbar-collapse mt-5 text-center">
+                <ul class="list-unstyled">
+                    <li>
+                        <button id="saveBtn" class="btn btn-primary  mb-3">Save <i class="fa-solid fa-floppy-disk"
+                                style="color: #ffffff;"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="loadBtn" class="btn btn-secondary w-100 mb-3">Load <i
+                                class="fa-solid fa-file-arrow-up" style="color: #ffffff;"></i></button>
+                    </li>
+                    <li>
+                        <button id="clearBtn" class="btn btn-danger w-100 mb-3 disabled">Clear <i
+                                class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
     <!-- Heading -->
     <h1 id="h1" class="h1 text-center mt-2">My Task List</h1>
@@ -136,15 +161,16 @@
         </div>
     </div>
     <!-- Save / Load / Clear -->
-    <div class="row">
+    <!-- <div class="row">
         <div id="saveLoadDiv" class="col-10 text-center m-auto mb-3">
             <button id="saveBtn" class="btn btn-primary w-25 mb-3">Save <i class="fa-solid fa-floppy-disk"
                     style="color: #ffffff;"></i></button>
             <button id="loadBtn" class="btn btn-secondary w-25 mb-3">Load <i class="fa-solid fa-gears"
                     style="color: #ffffff;"></i></button>
-            <button id="clearBtn" class="btn btn-danger w-25 mb-3 disabled">Clear List <i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
+            <button id="clearBtn" class="btn btn-danger w-25 mb-3 disabled">Clear List <i class="fa-solid fa-trash"
+                    style="color: #ffffff;"></i></button>
         </div>
-    </div>
+    </div> -->
     <!-- Index.js -->
     <script src="/assets/js/index.js" type="module"></script>
     <script src="/assets/js/nav.js"></script>
