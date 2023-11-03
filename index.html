@@ -88,26 +88,29 @@
                 </div>
             </nav>
         </div>
-        <div id="saveLoad" class="col-2 my-3">
-            <!-- Menu Toggler Btn -->
-            <button class="navbar-toggler p-0 mr-3 float-right" type="button" data-toggle="collapse"
-                data-target="#saveLoadToggler" aria-controls="saveLoad" aria-expanded="false"
-                aria-label="Toggle navigation">
+        <!-- Save / Load / Clear Dropdown Menu  -->
+        <div id="saveLoad" class="col-2 my-3 dropdown">
+            <!-- Settings Toggler Btn -->
+            <button class="p-0 mr-3 float-right btn" type="button" data-toggle="dropdown"
+                aria-controls="saveLoadDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span><i class="fa-solid fa-gears"></i></span>
             </button>
-            <div id="saveLoadToggler" class="float-right collapse navbar-collapse mt-5 text-center">
+            <!-- Settings Dropdown Container -->
+            <div id="saveLoadDropdown" class="float-right dropdown-menu mt-2 mr-3 text-center border-0"
+                aria-labelledby="saveLoadDropdown">
+                <!-- Settings Btns -->
                 <ul class="list-unstyled">
                     <li>
-                        <button id="saveBtn" class="btn btn-primary  mb-3">Save <i class="fa-solid fa-floppy-disk"
+                        <button id="saveBtn" class="btn btn-primary w-75 mb-3">Save <i class="fa-solid fa-floppy-disk"
                                 style="color: #ffffff;"></i>
                         </button>
                     </li>
                     <li>
-                        <button id="loadBtn" class="btn btn-secondary w-100 mb-3">Load <i
+                        <button id="loadBtn" class="btn btn-secondary w-75 mb-3">Load <i
                                 class="fa-solid fa-file-arrow-up" style="color: #ffffff;"></i></button>
                     </li>
                     <li>
-                        <button id="clearBtn" class="btn btn-danger w-100 mb-3 disabled">Clear <i
+                        <button id="clearBtn" class="btn btn-danger w-75 mb-3 disabled">Clear <i
                                 class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
                     </li>
                 </ul>
