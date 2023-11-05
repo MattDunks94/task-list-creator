@@ -209,14 +209,15 @@ document.addEventListener("DOMContentLoaded", function () {
             tableHeaders.parentElement.classList.remove("d-none");
             document.getElementById("noTasks").classList.add("d-none");
             clearBtn.classList.remove("disabled");
+            // From media-queries.js.
+            // Executes when a task is added.
+            mediaQueries();
         };
 
         // Reset input value.
         input.value = "";
         // Refocus input after every addBtn click event.
         input.focus();
-        // From media-queries.js.
-        mediaQueries();
     };
 
     // Keypress event listener for adding tasks via "Enter" key.
