@@ -58,6 +58,7 @@ window.addEventListener("resize", function () {
         // Turn dropdown into an horizontal list.
         ul.classList.add("list-group-horizontal");
         ul.classList.add("list-group");
+        ul.classList.add("pl-2");
         [...liElements].forEach((element) => {
             element.classList.add("list-group");
             element.classList.add("mr-2");
@@ -67,6 +68,7 @@ window.addEventListener("resize", function () {
     } else if (this.window.innerWidth > 350) {
         ul.classList.remove("list-group-horizontal");
         ul.classList.remove("list-group");
+        ul.classList.remove("pl-2");
         [...liElements].forEach((element) => {
             element.classList.remove("list-group");
             element.classList.remove("mr-2");
@@ -80,6 +82,7 @@ window.addEventListener("resize", function () {
 if (window.matchMedia("(max-width: 350px)").matches) {
     ul.classList.add("list-group-horizontal");
     ul.classList.add("list-group");
+    ul.classList.add("pl-2");
     [...liElements].forEach((element) => {
         element.classList.add("list-group");
         element.classList.add("mr-2");
