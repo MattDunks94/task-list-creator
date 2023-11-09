@@ -157,6 +157,10 @@
     #taskListDiv {
         max-height: 70vh;
     }
+
+    #usersInput, #addTaskBtn {
+        width: 43%;
+    }    
 }
 
 /* For screens 540px wide */
