@@ -1,7 +1,11 @@
+let helpTabList = document.getElementById("helpTabList");
+let helpToggler = document.getElementById("helpToggler");
+let modalContainer = document.getElementById("modalContainer");
+
 // Modal for displaying help info on small screens.
 let helpModal = `
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalScrollable">
-  Launch demo modal
+<button id="modalToggler" type="button" class="navbar-toggler p-0 ml-3" data-toggle="modal" data-target="#modalScrollable">
+<span><i class="fa-solid fa-question"></i></span>
 </button>
 
 <div class="modal fade" id="modalScrollable" tabindex="-1" role="dialog" aria-labelledby="modalScrollableTitle" aria-hidden="true">
@@ -22,10 +26,14 @@ let helpModal = `
       </div>
     </div>
   </div>
-</div>`
-
+</div>`;
 
 window.addEventListener("resize", function () {
     if (this.window.innerWidth < 540) {
+        helpToggler.classList.add("d-none");
+        modalContainer.innerHTML = helpModal;
+    } else {
+        helpToggler.classList.remove("d-none");
+        modalContainer.innerHTML = '';
     };
 });
