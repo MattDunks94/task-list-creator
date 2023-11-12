@@ -1,4 +1,4 @@
-#helpBtn, #saveLoad .fa-gears {
+#helpToggler, #saveLoad .fa-gears {
     opacity: 0.5;
 }
 
@@ -6,7 +6,7 @@
     opacity: 1;
 }
 
-#helpInfo kbd {
+#addingTasks kbd {
     background-color: lightgray;
     color: #000;
 }
