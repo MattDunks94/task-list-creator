@@ -31,11 +31,12 @@
         <div class="col-9 my-3">
             <!-- Help Info Toggler Btn -->
             <button id="helpToggler" class="navbar-toggler p-0 ml-3" type="button" data-toggle="collapse"
-                data-target="#tabListContainer" aria-controls="tabListContainer" aria-expanded="false"
+                data-target="#helpTabList" aria-controls="helpTabList" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span><i class="fa-solid fa-question"></i></span>
             </button>
-            <div id="tabListContainer" class="collapse navbar-collapse">
+            <!-- Help Tab List -->
+            <div id="helpTabList" class="collapse navbar-collapse">
                 <div class="row mt-2 ml-2">
                     <div class="col-4">
                         <div class="list-group" id="list-tab" role="tablist">
@@ -94,6 +95,8 @@
                     </div>
                 </div>
             </div>
+            <!-- Help Modal For Small Screens -->
+            <div id="modalContainer"></div>
         </div>
         <!-- Save / Load / Clear Dropdown Menu  -->
         <div id="saveLoad" class="col-3 my-3 dropleft">
