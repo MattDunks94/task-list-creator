@@ -1,4 +1,4 @@
-#helpInfo .fa-question, .help-heading, #saveLoad .fa-gears {
+#helpBtn, #saveLoad .fa-gears {
     opacity: 0.5;
 }
 
