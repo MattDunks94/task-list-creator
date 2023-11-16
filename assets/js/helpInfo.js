@@ -1,6 +1,7 @@
 let helpTabList = document.getElementById("helpTabList");
 let helpToggler = document.getElementById("helpToggler");
 let modalContainer = document.getElementById("modalContainer");
+let modalBackdrop = document.getElementsByClassName("modal-backdrop");
 
 // Modal for displaying help info on small screens.
 let helpModal = `
@@ -32,8 +33,13 @@ window.addEventListener("resize", function () {
     if (this.window.innerWidth < 540) {
         helpToggler.classList.add("d-none");
         modalContainer.innerHTML = helpModal;
+        helpTabList.classList.add("d-none");
     } else {
         helpToggler.classList.remove("d-none");
         modalContainer.innerHTML = '';
+        helpTabList.classList.remove("d-none");
+        [...modalBackdrop].forEach((backdrop) => {
+          backdrop.remove();
+        });
     };
 });
