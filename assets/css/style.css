@@ -208,6 +208,16 @@
     #priority {
         height: 20vh;
     }
+
+    #accordionDropdown :nth-child(2) kbd {
+        background-color: lightgray;
+        color: #000;
+    }
+
+    #collapseFour:nth-child(2) {
+        max-height: 150px;
+        overflow-y: auto;
+    }
 }
 
 /* For screens 414px wide */
