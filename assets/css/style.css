@@ -214,6 +214,14 @@
         color: #000;
     }
 
+    #accordionDropdown .card-header {
+        background-color: #fff
+    }
+
+    #accordionDropdown .card-header:hover {
+        background-color: rgb(248, 249, 250);
+    }
+
     #collapseFour:nth-child(2) {
         max-height: 150px;
         overflow-y: auto;
