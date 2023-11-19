@@ -1,6 +1,6 @@
-// Help Info Dropdowns.
+// HELP INFO DROPDOWNS
 
-// For Large Screens.
+// Tab list dropdown. For Large Screens.
 let tabListDropdown = `
 <div class="col-12 px-3 mb-3">
   <div class="list-group-horizontal list-group" id="list-tab" role="tablist">
@@ -71,7 +71,7 @@ let tabListDropdown = `
   </div>
 </div>`;
 
-// For Small Screens.
+// Accordion dropdown. For Small Screens.
 let accordionDropdown = `
 <div class="col-12 accordion" id="accordionDropdown">
   <div class="card">
@@ -161,18 +161,29 @@ let accordionDropdown = `
   </div>
 </div>`;
 
-let helpInfo = document.getElementById("helpTabList").firstElementChild;
-helpInfo.innerHTML = tabListDropdown;
+// Help container for dropdown app information.
+let helpContainer = document.getElementById("helpContainer").firstElementChild;
+// Default dropdown.
+helpContainer.innerHTML = tabListDropdown;
 
+/** 
+ * Media query for screen size 470px.
+ * If less than 470px, accordionDropdown occupies helpContainer.
+ * Otherwise, tabListDropdown is in place.
+ */
 window.addEventListener("resize", function () {
   if (this.window.innerWidth < 470) {
-    helpInfo.innerHTML = accordionDropdown;
+    helpContainer.innerHTML = accordionDropdown;
   } else {
-    helpInfo.innerHTML = tabListDropdown;
+    helpContainer.innerHTML = tabListDropdown;
   };
 });
+// Media query for fixed window max-width of 470px. 
+if (window.matchMedia("(max-width: 470px)").matches) {
+  helpContainer.innerHTML = accordionDropdown;
+};
 
-// Save / Load / Clear Dropdown.
+// SAVE / LOAD / CLEAR DROPDOWN
 let saveLoadDropdown = document.getElementById("saveLoadDropdown");
 let ul = saveLoadDropdown.firstElementChild;
 let liElements = ul.children;
