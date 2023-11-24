@@ -49,7 +49,7 @@ let tabListDropdown = `
         <li>Done tasks are marked down with a green background.</li>
     </div>
     <!-- Priority Help Info -->
-    <div class="tab-pane fade mb-3" id="priority" role="tabpanel"
+    <div class="tab-pane fade" id="priority" role="tabpanel"
         aria-labelledby="list-settings-list">
         <li>To markdown tasks as important, click the <i
                 class="fa-solid fa-circle-exclamation fa-xl"
