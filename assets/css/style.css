@@ -1,3 +1,9 @@
+body {
+    background-image: url('../media/BACKGROUND.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 #helpToggler, #modalToggler, #saveLoad .fa-gears {
     opacity: 0.5;
 }
@@ -36,6 +42,7 @@
 #taskListDiv {
     max-height: 40vh;
     margin-bottom: 10px;
+    background-color: #ffffffb6
 }
 
 #bttBtn {
