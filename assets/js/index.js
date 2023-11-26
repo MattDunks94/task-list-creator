@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         taskNameElement.innerText = input.value;
         taskNameElement.classList.add("text-truncate");
         taskNameElement.style.fontWeight = 700;
+        taskNameElement.style.fontSize = '21px';
 
         // Priority element
         priorityElement.append(upBtn, importantBtn, downBtn);
@@ -137,6 +138,8 @@ document.addEventListener("DOMContentLoaded", function () {
         removeBtn.classList.add("btn", "btn-sm", "btn-danger", "w-75");
         // Done & remove btns innerText value.
         [doneBtn.innerText, removeBtn.innerText] = ["Done", "Remove"];
+        // Done & remove btns font size.
+        [doneBtn.style.fontSize, removeBtn.style.fontSize] = ['17px', '17px'];
 
         // doneBtn click event.
         doneBtn.addEventListener("click", function () {
