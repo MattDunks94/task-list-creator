@@ -15,6 +15,7 @@ import {
 
 let savedTasks = localStorage.getItem("task-list") ? JSON.parse(localStorage.getItem("task-list")) : [];
 
+let taskListDiv = document.getElementById("taskListDiv");
 let saveBtn = document.getElementById("saveBtn");
 let loadBtn = document.getElementById("loadBtn");
 let clearBtn = document.getElementById("clearBtn");
@@ -65,6 +66,7 @@ function clearTaskList(headers, counter, btn) {
     tasks.forEach((task) => {
         task.remove();
     });
+    taskListDiv.classList.add("d-none");
     headers.parentElement.classList.add("d-none");
     document.getElementById("noTasks").classList.remove("d-none");
     counter.classList.add("d-none");
