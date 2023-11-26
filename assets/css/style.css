@@ -28,6 +28,10 @@ body {
     max-width: 100vw;
 }
 
+#saveLoadDropdown {
+    background-color: #ffffffe8;
+}
+
 .alert {
     z-index: 1;
 }
