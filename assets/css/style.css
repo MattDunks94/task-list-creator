@@ -58,7 +58,7 @@ body * {
 }
 
 #taskCounter span {
-    font-size: 28px;
+    font-size: 32px;
 }
 
 #bttBtn {
@@ -119,6 +119,10 @@ body * {
     #usersInput, #addTaskBtn {
         width: 43%;
     }    
+
+    #taskCounter span {
+        font-size: 28px;
+    }
 }
 
 /* For screens 540px wide */
