@@ -204,6 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Table Headers, Task counter, display and innerText of elements.
         if (taskListDiv.children.length > 0) {
+            taskListDiv.classList.remove("d-none");
             taskCounter.classList.remove("d-none");
             taskCounter.firstElementChild.innerText = taskListDiv.children.length;
             tableHeaders.parentElement.classList.remove("d-none");
@@ -285,6 +286,7 @@ function removeTask() {
     this.closest("ul").remove();
     taskCounter.firstElementChild.innerText = taskListDiv.children.length;
     if (taskListDiv.children.length === 0) {
+        taskListDiv.classList.add("d-none");
         tableHeaders.parentElement.classList.add("d-none");
         taskCounter.classList.add("d-none");
     };
