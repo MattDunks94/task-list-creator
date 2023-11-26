@@ -228,10 +228,6 @@ body * {
 
 /* For screens 280px wide */
 @media (max-width: 280px) {
-    body {
-        font-size: 1.2rem;
-    }
-
     #h1 {
         font-size: 1.9rem;
     }
