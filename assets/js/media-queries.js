@@ -9,6 +9,7 @@ export function mediaQueries() {
     let btnsArray = [...btns];
     // Assign each btn to variable. (apart from importantBtn).
     let upBtn = btnsArray[0];
+    let importantBtn = btnsArray[1];
     let downBtn = btnsArray[2];
     let doneBtn = btnsArray[3];
     let removeBtn = btnsArray[4];
@@ -25,6 +26,7 @@ export function mediaQueries() {
                 tasks[task].children[1].classList.remove("px-0");
             };
             [doneBtn.style.fontSize, removeBtn.style.fontSize] = ['22px', '22px'];
+            importantBtn.classList.add("btn-lg");
             // upBtn
             upBtn.classList.add("float-left");
             upBtn.classList.add("btn-lg");
@@ -47,6 +49,7 @@ export function mediaQueries() {
             doneBtn.classList.add("btn-sm");
             removeBtn.classList.add("btn-sm");
             [doneBtn.style.fontSize, removeBtn.style.fontSize] = ['17px', '17px'];
+            importantBtn.classList.remove("btn-lg");
             // upBtn
             upBtn.classList.remove("float-left");
             upBtn.classList.remove("btn-lg");
