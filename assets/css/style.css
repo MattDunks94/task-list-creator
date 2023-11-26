@@ -1,14 +1,14 @@
-/* html {
-    height: 100vh;
-    width: 100vw;
-} */
-
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 body {
     background-image: url('../media/BACKGROUND.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     height: 100vh;
+}
+
+body * {
+    font-family: 'Courier Prime', monospace;
 }
 
 #helpToggler, #modalToggler, #saveLoad .fa-gears {
