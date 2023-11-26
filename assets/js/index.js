@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Task Name Element.
         taskNameElement.innerText = input.value;
         taskNameElement.classList.add("text-truncate");
+        taskNameElement.style.fontWeight = 700;
 
         // Priority element
         priorityElement.append(upBtn, importantBtn, downBtn);
