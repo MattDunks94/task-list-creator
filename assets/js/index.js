@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Priority element
         priorityElement.append(upBtn, importantBtn, downBtn);
         priorityElement.classList.add("px-0");
+        priorityElement.style.paddingTop = '15px';
 
         importantBtn.classList.add("mx-lg-4", "mx-4", "red-btn", "opacity-30");
         // Priority li element btns innerHTML, fontawesome icons.
