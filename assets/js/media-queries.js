@@ -24,6 +24,7 @@ export function mediaQueries() {
                 });
                 tasks[task].children[1].classList.remove("px-0");
             };
+            [doneBtn.style.fontSize, removeBtn.style.fontSize] = ['22px', '22px'];
             // upBtn
             upBtn.classList.add("float-left");
             upBtn.classList.add("btn-lg");
@@ -45,6 +46,7 @@ export function mediaQueries() {
             };
             doneBtn.classList.add("btn-sm");
             removeBtn.classList.add("btn-sm");
+            [doneBtn.style.fontSize, removeBtn.style.fontSize] = ['17px', '17px'];
             // upBtn
             upBtn.classList.remove("float-left");
             upBtn.classList.remove("btn-lg");
@@ -69,6 +71,7 @@ export function mediaQueries() {
             upBtn.classList.add("btn-lg");
             downBtn.classList.add("btn-lg");
         };
+        [doneBtn.style.fontSize, removeBtn.style.fontSize] = ['22px', '22px'];
         // upBtn
         upBtn.classList.add("float-left");
         // downBtn
@@ -93,6 +96,7 @@ export function mediaQueries() {
             removeBtn.classList.add("float-right");
             // Temporarily adding class 'd-none' to removeElement li element.
             doneBtn.parentElement.nextElementSibling.classList.add("d-none");
+            [doneBtn.style.fontSize, removeBtn.style.fontSize] = ['17px', '17px'];
         } else {
             doneBtn.classList.replace("w-48", "w-100");
             removeBtn.classList.replace("w-48", "w-100");
@@ -119,5 +123,6 @@ export function mediaQueries() {
         removeBtn.classList.add("float-right");
         // Adding class 'd-none' to removeElement li element.
         doneBtn.parentElement.nextElementSibling.classList.add("d-none");
+        [doneBtn.style.fontSize, removeBtn.style.fontSize] = ['17px', '17px'];
     };
 };
