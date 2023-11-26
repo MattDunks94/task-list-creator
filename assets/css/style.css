@@ -57,6 +57,10 @@ body * {
     padding-bottom: 10px;
 }
 
+#taskCounter span {
+    font-size: 28px;
+}
+
 #bttBtn {
     color: #388eff;
     height: 40px;
