@@ -1,7 +1,14 @@
+/* html {
+    height: 100vh;
+    width: 100vw;
+} */
+
 body {
     background-image: url('../media/BACKGROUND.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100vh;
 }
 
 #helpToggler, #modalToggler, #saveLoad .fa-gears {
@@ -42,14 +49,15 @@ body {
 #taskListDiv {
     max-height: 40vh;
     margin-bottom: 10px;
-    background-color: #ffffffe8
+    background-color: #ffffffe8;
+    padding-bottom: 10px;
 }
 
 #bttBtn {
     color: #388eff;
     height: 40px;
     width: 60%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255);
     border: #388eff7e solid 1px;
     border-radius: 5px;
 }
