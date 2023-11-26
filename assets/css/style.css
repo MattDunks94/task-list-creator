@@ -127,10 +127,6 @@ body * {
 
 /* For screens 540px wide */
 @media (max-width: 540px) {
-    body {
-        font-size: 1.4rem;
-    }
-
     #usersInput, #addTaskBtn {
         width: 60%;
     }
