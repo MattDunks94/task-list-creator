@@ -236,6 +236,10 @@ body * {
     .alert {
         font-size: 0.9rem;
     }
+
+    #bttBtn {
+        font-size: 1.2rem;
+    }
 }
 
 /* For screens 280px wide */
