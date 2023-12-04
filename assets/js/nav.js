@@ -27,13 +27,9 @@ let tabListDropdown = `
     <!-- Add Tasks Help Info -->
     <div class="tab-pane fade show active" id="addingTasks" role="tabpanel"
         aria-labelledby="list-home-list">
-        <li>To add tasks to your task list, begin by typing in the task
-            input
-            and click the
-            <button class="btn btn-sm btn-primary">Add Task</button> button
-            or
-            press the
-            <kbd>Enter</kbd> key.</li>
+        <li>To add tasks, type a task in the input and click the
+            <button class="btn btn-sm btn-primary">Add Task <i class="fa-solid fa-plus" style="color: #ffffff;">
+            </i></button> button or press the <kbd>Enter</kbd> key.</li>
     </div>
     <!-- Remove Tasks Help Info -->
     <div class="tab-pane fade" id="removeTasks" role="tabpanel"
@@ -87,9 +83,9 @@ let accordionDropdown = `
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" 
     data-parent="#accordionDropdown">
       <div class="card-body">
-        <li>To add tasks to your task list, begin by typing in the task input and click the
-        <button class="btn btn-sm btn-primary">Add Task</button> button or press the
-        <kbd>Enter</kbd> key.</li>
+        <li>To add tasks, type a task in the input and click the
+        <button class="btn btn-sm btn-primary">Add Task <i class="fa-solid fa-plus" style="color: #ffffff;">
+        </i></button> button or press the <kbd>Enter</kbd> key.</li>
       </div>
     </div>
   </div>
