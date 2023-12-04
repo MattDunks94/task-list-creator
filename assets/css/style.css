@@ -26,6 +26,7 @@ body * {
 
 #modal {
     max-width: 100vw;
+    top: 20vh;
 }
 
 #saveLoadDropdown {
@@ -141,6 +142,10 @@ body * {
 
 /* For screens 540px wide */
 @media (max-width: 540px) {
+    #modal {
+        top: 8vh;
+    }
+
     #usersInput, #addTaskBtn {
         width: 60%;
     }
