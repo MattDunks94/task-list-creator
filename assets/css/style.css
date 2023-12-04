@@ -36,6 +36,24 @@ body * {
     z-index: 1;
 }
 
+#h1 {
+    background-color: #000;
+    color: #fff;
+    width: fit-content;
+    padding: 3px 10px;
+    margin: auto;
+    transform: skew(-10deg);
+    border-radius: 3px;
+}
+
+#taskCounter {
+    background-color: #ffffffe8;
+}
+
+#taskCounter span {
+    font-size: 32px;
+}
+
 #usersInput {
     padding: 4px 10px;
     border: 1px solid rgba(0, 0, 0, 0.4);
@@ -55,10 +73,6 @@ body * {
     margin-bottom: 10px;
     background-color: #ffffffe8;
     padding-bottom: 10px;
-}
-
-#taskCounter span {
-    font-size: 32px;
 }
 
 #bttBtn {
@@ -207,7 +221,7 @@ body * {
     }
 
     #usersInput::placeholder {
-        font-size: 60%;
+        font-size: 80%;
     }
 
     #h1 {
@@ -219,15 +233,12 @@ body * {
     }
 }
 
-/* For screens 360px wide
-@media (max-width: 360px) {
-    #taskListDiv {
-        max-height: 50vh;
-    }
-} */
-
 /* For screens 280px wide */
 @media (max-width: 280px) {
+    body {
+        background-position-y: 25px;
+    }
+
     #h1 {
         font-size: 1.9rem;
     }
