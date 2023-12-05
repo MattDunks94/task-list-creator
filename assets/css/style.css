@@ -29,11 +29,7 @@ body * {
     top: 20vh;
 }
 
-#modal h5 {
-    font-weight: 700;
-}
-
-#list-tab a {
+#modal h5, #list-tab a, #noTasks {
     font-weight: 700;
 }
 
