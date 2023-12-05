@@ -29,7 +29,7 @@ body * {
     top: 20vh;
 }
 
-#modal h5, #list-tab a, #noTasks {
+#modal h5, #list-tab a, #accordionDropdown a, #noTasks {
     font-weight: 700;
 }
 
