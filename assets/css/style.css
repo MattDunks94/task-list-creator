@@ -29,6 +29,14 @@ body * {
     top: 20vh;
 }
 
+#modal h5 {
+    font-weight: 700;
+}
+
+#list-tab a {
+    font-weight: 700;
+}
+
 #saveLoadDropdown {
     background-color: #ffffffe8;
 }
@@ -202,6 +210,13 @@ body * {
     #bttBtn {
         width: 100%;
         font-size: 1.2rem;
+    }
+}
+
+/* For screens 470px wide */
+@media (max-width: 470px) {
+    #accordionDropdown a {
+        font-weight: 700;
     }
 }
 
