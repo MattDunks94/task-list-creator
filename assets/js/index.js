@@ -61,6 +61,13 @@ document.addEventListener("DOMContentLoaded", function () {
             document.createElement("button")
         ];
 
+        // Setting 'aria-label' attrs to all created btns for accessibilty.
+        upBtn.setAttribute("aria-label", "Move Task Up");
+        importantBtn.setAttribute("aria-label", "Assign Task as Important");
+        downBtn.setAttribute("aria-label", "Move Task Down");
+        doneBtn.setAttribute("aria-label", "Assign Task as Done");
+        removeBtn.setAttribute("aria-label", "Remove Task");
+
         // Create individual task row, containing list elements.
         let rowUl = document.createElement("ul");
         rowUl.classList.add("list-group", "list-group-horizontal", "mt-2", "invisible-border-left");
