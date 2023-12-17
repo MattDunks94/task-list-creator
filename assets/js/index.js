@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 removeBtn.addEventListener("click", removeTask);
             } else {
                 removeBtn.removeEventListener("click", removeTask);
-            };
+            }
             doneBtn.addEventListener("click", function () {
                 taskNameElement.classList.toggle("important-task");
                 rowUl.classList.toggle("border-left-red");
@@ -126,14 +126,14 @@ document.addEventListener("DOMContentLoaded", function () {
         upBtn.addEventListener("click", function () {
             if (rowUl != taskListDiv.firstElementChild) {
                 moveTaskUp(taskListDiv, rowUl);
-            };
+            }
         });
 
         // downBtn click event listener, containing moveTaskDown function.
         downBtn.addEventListener("click", function () {
             if (rowUl !== taskListDiv.lastElementChild) {
                 moveTaskDown(taskListDiv, rowUl);
-            };
+            }
         });
 
         // Done & Remove Elements, appending their respective btns.
@@ -166,25 +166,25 @@ document.addEventListener("DOMContentLoaded", function () {
                     uniqueTasks.splice(i, 1);
                     arrayOfTasks.splice(i, 1);
                     savedTasks.splice(i, 1);
-                };
-            };
+                }
+            }
             // Display 'No tasks added!' when taskListDiv has no children.
             if (taskListDiv.children.length === 0) {
                 document.getElementById("noTasks").classList.remove("d-none");
                 localStorage.clear();
-            };
+            }
         });
 
         // Checking input value, display alert if empty.
         if (input.value === "" || input.value === " ") {
             alertBox.innerHTML = emptyTaskAlert;
             rowUl.remove();
-        };
+        }
 
         // Pushing task name to array for comparison reasons, apart from empty values.
         if (input.value !== "" && input.value != " ") {
             arrayOfTasks.push(taskNameElement.innerText);
-        };
+        }
 
         /**
          * Iterating through arrayOfTasks.
@@ -198,14 +198,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 taskListDiv.prepend(rowUl);
                 // Pushing task to savedTasks array.
                 savedTasks.push(task);
-            };
+            }
         });
 
         // If arrays are different length display duplicateAlert and remove entry.
         if (arrayOfTasks.length > uniqueTasks.length) {
             alertBox.innerHTML = duplicateAlert;
             arrayOfTasks.pop();
-        };
+        }
 
         // Timeout function from 'alerts.js'
         alertTimeout(alertBox);
@@ -221,19 +221,19 @@ document.addEventListener("DOMContentLoaded", function () {
             // From media-queries.js.
             // Executes when a task is added.
             mediaQueries();
-        };
+        }
 
         // Reset input value.
         input.value = "";
         // Refocus input after every addBtn click event.
         input.focus();
-    };
+    }
 
     // Keypress event listener for adding tasks via "Enter" key.
     input.addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
             addTaskBtn.click();
-        };
+        }
     });
 
     // Back to top btn.
@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
             bttBtn.parentElement.classList.replace("d-none", "fade-in");
         } else if (taskListDiv.scrollTop < 550) {
             bttBtn.parentElement.classList.replace("fade-in", "d-none");
-        };
+        }
     });
     // bttBtn click event, returns user back to top of taskListDiv.
     bttBtn.addEventListener("click", function () {
@@ -272,9 +272,9 @@ document.addEventListener("DOMContentLoaded", function () {
             alertBox.innerHTML = noTasksAlert;
             alertTimeout(alertBox);
             input.focus();
-        })
+        });
         loadBtn.classList.add("disabled");
-    };
+    }
 
     // CLEAR TASK LIST
     clearBtn.addEventListener("click", function () {
@@ -286,7 +286,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alertBox.innerHTML = noTasksAlert;
                 alertTimeout(alertBox);
             });
-        };
+        }
         input.focus();
     });
 });
@@ -299,15 +299,15 @@ function removeTask() {
         taskListDiv.classList.add("d-none");
         tableHeaders.parentElement.classList.add("d-none");
         taskCounter.classList.add("d-none");
-    };
-};
+    }
+}
 
 // Move task up list.
 function moveTaskUp(list, task) {
     list.insertBefore(task, task.previousSibling);
-};
+}
 
 // Move task down.
 function moveTaskDown(list, task) {
     list.insertBefore(task.nextElementSibling, task);
-};
+}
