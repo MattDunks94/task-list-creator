@@ -120,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 taskNameElement.classList.toggle("important-task");
                 rowUl.classList.toggle("border-left-red");
             });
-            input.focus();
         });
 
         // upBtn click event listener, containing moveTaskUp function.
@@ -128,7 +127,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (rowUl != taskListDiv.firstElementChild) {
                 moveTaskUp(taskListDiv, rowUl);
             };
-            input.focus();
         });
 
         // downBtn click event listener, containing moveTaskDown function.
@@ -136,7 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (rowUl !== taskListDiv.lastElementChild) {
                 moveTaskDown(taskListDiv, rowUl);
             };
-            input.focus();
         });
 
         // Done & Remove Elements, appending their respective btns.
@@ -158,7 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 taskNameElement.classList.toggle("important-task");
                 rowUl.classList.toggle("border-left-red");
             });
-            input.focus();
         });
 
         // Adding removeTask function, click event to removeBtn.
@@ -302,7 +298,6 @@ function removeTask() {
         tableHeaders.parentElement.classList.add("d-none");
         taskCounter.classList.add("d-none");
     };
-    document.getElementById("usersInput").focus();
 };
 
 // Move task up list.
