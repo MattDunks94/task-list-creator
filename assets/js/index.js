@@ -262,6 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("tasks")) {
         loadBtn.addEventListener("click", function () {
             loadTaskList(input, addTask);
+            input.focus();
         });
     } else {
         loadBtn.removeEventListener("click", function () {
@@ -270,6 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loadBtn.addEventListener("click", function () {
             alertBox.innerHTML = noTasksAlert;
             alertTimeout(alertBox);
+            input.focus();
         })
         loadBtn.classList.add("disabled");
     };
