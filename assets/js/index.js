@@ -289,18 +289,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         input.focus();
     });
+    
+    // Removes Task Function.
+    function removeTask() {
+        this.closest("ul").remove();
+        taskCounter.firstElementChild.innerText = taskListDiv.children.length;
+        if (taskListDiv.children.length === 0) {
+            taskListDiv.classList.add("d-none");
+            tableHeaders.parentElement.classList.add("d-none");
+            taskCounter.classList.add("d-none");
+        }
+    }
 });
 
-// Removes Task Function.
-function removeTask() {
-    this.closest("ul").remove();
-    taskCounter.firstElementChild.innerText = taskListDiv.children.length;
-    if (taskListDiv.children.length === 0) {
-        taskListDiv.classList.add("d-none");
-        tableHeaders.parentElement.classList.add("d-none");
-        taskCounter.classList.add("d-none");
-    }
-}
 
 // Move task up list.
 function moveTaskUp(list, task) {
