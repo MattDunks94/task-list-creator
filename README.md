@@ -64,6 +64,7 @@ I used [W3C Markup Validation Service](https://validator.w3.org/) to test all HT
   
   ![](./documentation/README-images/HTML-VALIDATOR.png)
 </details>
+
 ### CSS Validation
 ### JS Validation
 ### Lighthouse Report
