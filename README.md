@@ -72,7 +72,16 @@ I used [W3C Markup Validation Service](https://validator.w3.org/) to test all CS
   
   ![](documentation/README-images/CSS-VALIDATOR.png)
 </details>
+
 ### JS Validation
+I used [ES6 Syntax Check - PiliApp](https://www.piliapp.com/syntax-check/es6/) to test all Javascript files.
+<details>
+    <summary>index.js Validation Results</summary>
+  
+  ![](documentation/README-images/ES6-JS-VALIDATOR.png)
+  
+</details>
+
 ### Lighthouse Report
 
 ## Deployment
