@@ -59,10 +59,10 @@
 ## Testing
 ### HTML Validation
 I used [W3C Markup Validation Service](https://validator.w3.org/) to test all HTML files.
-<details>
+<detail>
     <summary>HTML Validation Results</summary>
     ![](/documentation/README-images/HTML-VALIDATOR.png)
-</details>
+</detail>
 ### CSS Validation
 ### JS Validation
 ### Lighthouse Report
