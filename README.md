@@ -24,7 +24,7 @@
 - [Testing](#testing)
   - [HTML Validation](#html-validation)
   - [CSS Validation](#css-validation)
-  - [JS Validator](#js-validator)
+  - [JS Validation](#js-validation)
   - [Lighthouse Report](#lighthouse-report)
 - [Deployment](#deployment)
 - [Features for the Future](#features-for-the-future)
@@ -58,8 +58,13 @@
 
 ## Testing
 ### HTML Validation
+I used [W3C Markup Validation Service](https://validator.w3.org/) to test all HTML files.
+<details>
+    <summary>HTML Validation Results</summary>
+    ![](documentation/README-images/HTML-VALIDATOR.png)
+</details>
 ### CSS Validation
-### JS Validator
+### JS Validation
 ### Lighthouse Report
 
 ## Deployment
