@@ -62,10 +62,16 @@ I used [W3C Markup Validation Service](https://validator.w3.org/) to test all HT
 <details>
     <summary>HTML Validation Results</summary>
   
-  ![](./documentation/README-images/HTML-VALIDATOR.png)
+  ![](documentation/README-images/HTML-VALIDATOR.png)
 </details>
 
 ### CSS Validation
+I used [W3C Markup Validation Service](https://validator.w3.org/) to test all CSS files via direct input.
+<details>
+    <summary>CSS Validation Results</summary>
+  
+  ![](documentation/README-images/CSS-VALIDATOR.png)
+</details>
 ### JS Validation
 ### Lighthouse Report
 
