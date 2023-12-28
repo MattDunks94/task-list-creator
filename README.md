@@ -15,8 +15,8 @@
   - [Features](#features)
     - [Help Information](#help-information) 
     - [Adding Tasks](#adding-tasks)
-    - [Remove Tasks](#remove-tasks)
-    - [Assign Tasks](#assign-tasks)
+    - [Removing Tasks](#removing-tasks)
+    - [Assigning Tasks](#assigning-tasks)
     - [Rearrange Tasks](#rearrange-tasks)
     - [Save List](#save-list)
     - [Load List](#load-list)
@@ -24,6 +24,7 @@
 - [Testing](#testing)
   - [HTML Validation](#html-validation)
   - [CSS Validation](#css-validation)
+  - [JS Validator](#js-validator)
   - [Lighthouse Report](#lighthouse-report)
 - [Deployment](#deployment)
 - [Features for the Future](#features-for-the-future)
@@ -34,4 +35,46 @@
 - [Credits](#credits)
   - [Code](#code)
   - [Media](#media)
-  - [Inspiration](#inspiration)      
+  - [Inspiration](#inspiration)
+ 
+## User Experience (UX)
+
+### User Stories
+### Design
+#### - Mockup Diagrams:
+#### - Colour Palette:
+#### - Typography:
+#### - Imagery:
+
+## Features
+### Help Information
+### Adding Tasks 
+### Removing Tasks
+### Assigning Tasks
+### Rearrange Tasks
+### Save List
+### Load List
+### Clear List
+
+## Testing
+### HTML Validation
+### CSS Validation
+### JS Validator
+### Lighthouse Report
+
+## Deployment
+
+## Features for the Future
+
+## Bugs & Errors
+
+## Technologies Used
+
+### Languages Used
+### Frameworks, Libraries & Programs Used
+
+## Credits
+
+### Code 
+### Media 
+### Inspiration
