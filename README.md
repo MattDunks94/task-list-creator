@@ -51,7 +51,7 @@
 (For Large Screens, Tab List)
 ![](documentation/README-images/HELP-INFO-LRG.png)
 
-(For Small Screens, Accordion Collapse)
+(For Small Screens, Accordion Collapse)<br>
 ![](documentation/README-images/HELP-INFO-SM.png)
 
 The help information feature contains information on how to operate the app. This feature appears via a button click, this button being 
