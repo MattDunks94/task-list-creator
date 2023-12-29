@@ -79,38 +79,40 @@ I used [ES6 Syntax Check - PiliApp](https://www.piliapp.com/syntax-check/es6/) t
     <summary>index.js Validation Results</summary>
   
   ![](documentation/README-images/index.js-VALIDATION-RESULTS.png)
-  
 </details>
 
 <details>
     <summary>help-info.js Validation Results</summary>
   
   ![](documentation/README-images/help-info.js-VALIDATION-RESULTS.png)
-  
 </details>
 
 <details>
     <summary>save-load.js Validation Results</summary>
   
   ![](documentation/README-images/save-load.js-VALIDATION-RESULTS.png)
-  
 </details>
 
 <details>
     <summary>alerts.js Validation Results</summary>
   
   ![](documentation/README-images/alerts.js-VALIDATION-RESULTS.png)
-  
 </details>
 
 <details>
     <summary>media-queries.js Validation Results</summary>
   
   ![](documentation/README-images/media-queries.js-VALIDATION-RESULTS.png)
-  
 </details>
 
 ### Lighthouse Report
+I used [Google Chrome DevTools Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test performance, accessibility, best practises and SEO.
+
+<details>
+  <summary>Homepage Lighthouse Report</summary>
+
+  ![](documentation/README-images/LIGHTHOUSE-REPORT.png)
+</details>
 
 ## Deployment
 
