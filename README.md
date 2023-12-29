@@ -78,7 +78,35 @@ I used [ES6 Syntax Check - PiliApp](https://www.piliapp.com/syntax-check/es6/) t
 <details>
     <summary>index.js Validation Results</summary>
   
-  ![](documentation/README-images/ES6-JS-VALIDATOR.png)
+  ![](documentation/README-images/index.js-VALIDATION-RESULTS.png)
+  
+</details>
+
+<details>
+    <summary>index.js Validation Results</summary>
+  
+  ![](documentation/README-images/help-info.js-VALIDATION-RESULTS.png)
+  
+</details>
+
+<details>
+    <summary>index.js Validation Results</summary>
+  
+  ![](documentation/README-images/save-load.js-VALIDATION-RESULTS.png)
+  
+</details>
+
+<details>
+    <summary>index.js Validation Results</summary>
+  
+  ![](documentation/README-images/alerts.js-VALIDATION-RESULTS.png)
+  
+</details>
+
+<details>
+    <summary>index.js Validation Results</summary>
+  
+  ![](documentation/README-images/media-queries.js-VALIDATION-RESULTS.png)
   
 </details>
 
