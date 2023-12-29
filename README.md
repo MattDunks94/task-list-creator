@@ -83,28 +83,28 @@ I used [ES6 Syntax Check - PiliApp](https://www.piliapp.com/syntax-check/es6/) t
 </details>
 
 <details>
-    <summary>index.js Validation Results</summary>
+    <summary>help-info.js Validation Results</summary>
   
   ![](documentation/README-images/help-info.js-VALIDATION-RESULTS.png)
   
 </details>
 
 <details>
-    <summary>index.js Validation Results</summary>
+    <summary>save-load.js Validation Results</summary>
   
   ![](documentation/README-images/save-load.js-VALIDATION-RESULTS.png)
   
 </details>
 
 <details>
-    <summary>index.js Validation Results</summary>
+    <summary>alerts.js Validation Results</summary>
   
   ![](documentation/README-images/alerts.js-VALIDATION-RESULTS.png)
   
 </details>
 
 <details>
-    <summary>index.js Validation Results</summary>
+    <summary>media-queries.js Validation Results</summary>
   
   ![](documentation/README-images/media-queries.js-VALIDATION-RESULTS.png)
   
