@@ -44,8 +44,8 @@
 ### Design
 #### - Mockup Diagrams:
 #### - Colour Palette:
-![#000000](documentation/README-images/BLACK-COLOUR-PALETTE.png)
-![#FFFFFF](documentation/README-images/WHITE-COLOUR-PALETTE.png)
+<img src="documentation/README-images/BLACK-COLOUR-PALETTE.png" width="300">
+![](documentation/README-images/WHITE-COLOUR-PALETTE.png)
 #### - Typography:
 #### - Imagery:
 
