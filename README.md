@@ -49,8 +49,7 @@
 ## Features
 ### Help Information:
 (For Large Screens, Tab List)
-<img src="documentation/README-images/HELP-INFO-LRG.png" width="500" style="float: left">
-![](documentation/README-images/HELP-INFO-LRG.png)
+<img src="documentation/README-images/HELP-INFO-LRG.png" width="600" style="float: left">
 
 (For Small Screens, Accordion Collapse)<br>
 ![](documentation/README-images/HELP-INFO-SM.png)
