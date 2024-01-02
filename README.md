@@ -60,7 +60,7 @@ For smaller screens, the 'Help Info' feature is displayed using [Bootstrap V4.3 
 The accordion variation is ideal for smaller screens because each 'Help Info' section can be collapsed which saves space on screen and avoids the user having to scroll down.
 
 ### Adding Tasks
-[](documentation/README-images/ADD-TASK-INPUT-BTN.png)
+![](documentation/README-images/ADD-TASK-INPUT-BTN.png)
 The adding tasks feature allows users to add their own tasks to their task list. This is acheived by the user clicking on the 'Add Task +' button or by pressing the 'Enter' key on their keyboard.
 
 ### Removing Tasks
