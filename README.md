@@ -49,7 +49,7 @@
 ## Features
 ### Help Information:
 (For Large Screens, Tab List)
-<img src="documentation/README-images/HELP-INFO-LRG.png" width="50vw">
+<img src="documentation/README-images/HELP-INFO-LRG.png" width="500">
 ![](documentation/README-images/HELP-INFO-LRG.png)
 
 (For Small Screens, Accordion Collapse)<br>
