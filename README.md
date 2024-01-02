@@ -45,7 +45,7 @@
 #### - Mockup Diagrams:
 #### - Colour Palette:
 <img src="documentation/README-images/BLACK-COLOUR-PALETTE.png" width="400">
-<img src="documentation/README-images/WHITE-COLOUR-PALETTE.png" width="400" float="left">
+<img src="documentation/README-images/WHITE-COLOUR-PALETTE.png" width="400" style="float: left">
 
 #### - Typography:
 #### - Imagery:
