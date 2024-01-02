@@ -46,7 +46,8 @@
 #### - Colour Palette:
 <img src="documentation/README-images/BLACK-COLOUR-PALETTE.png" width="500">
 <img src="documentation/README-images/WHITE-COLOUR-PALETTE.png" width="500"><br>
-The colour palette for this app consists of mainly black and white, creating a monochrome theme. The other colours, that are used within this app, are [Bootstrap V4.3 Colors](https://getbootstrap.com/docs/4.3/utilities/colors/#color). These colours are mainly used for alerts and buttons and stand out from the monochrome theme.
+
+The colour palette for this app consists of mainly black and white, creating a monochrome theme. The other colours, that are used within this app, are [Bootstrap V4.3 Colors](https://getbootstrap.com/docs/4.3/utilities/colors/#color) . These colours are mainly used for alerts and buttons and stand out from the monochrome theme.
 
 #### - Typography:
 #### - Imagery:
