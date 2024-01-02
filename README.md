@@ -48,7 +48,7 @@
 
 ## Features
 ### Help Information:
-(For Large Screens, Tab List)
+(For Large Screens, Tab List) <br>
 <img src="documentation/README-images/HELP-INFO-LRG.png" width="600">
 
 (For Small Screens, Accordion Collapse)<br>
