@@ -52,7 +52,7 @@
 <img src="documentation/README-images/HELP-INFO-LRG.png" width="600">
 
 (For Small Screens, Accordion Collapse)<br>
-<img src="documentation/README-images/HELP-INFO-SM.png" width="600">
+<img src="documentation/README-images/HELP-INFO-SM.png" width="300" height="600">
 
 The help information feature contains information on how to operate the app. This feature appears via a button click, this button being<br> 
 [Font Awesome's Question Icon](https://fontawesome.com/search?q=question&o=r&m=free) in the top left of the screen, and is displayed using [Bootstrap V4.3 Modal](https://getbootstrap.com/docs/4.3/components/modal/). There are 2 variations of this feature for certain screen types. The 'Help Info' for large screens is [Bootstrap V4.3 Tablist Element](https://getbootstrap.com/docs/4.3/components/list-group/#tab). 
