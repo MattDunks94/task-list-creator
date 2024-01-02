@@ -59,7 +59,9 @@ The help information feature contains information on how to operate the app. Thi
 For smaller screens, the 'Help Info' feature is displayed using [Bootstrap V4.3 Accordion Collapse](https://getbootstrap.com/docs/4.3/components/collapse/#accordion-example). The reason for using two different variations to display the information is because when resizing the window, the tab list variation did not work, was not very responsive. This is because it is displayed horizontally and needed to change to a vertical list for smaller screens. I originally changed the tab list to a vertical list, for smaller devices, but this caused the 'Help Info' feature to be too long, meaning the user would have to scroll down to reveal all app operations. This lead to me looking for an alternative, hence the accordion variation.<br>
 The accordion variation is ideal for smaller screens because each 'Help Info' section can be collapsed which saves space on screen and avoids the user having to scroll down.
 
-### Adding Tasks 
+### Adding Tasks
+[](documentation/README-images/ADD-TASK-INPUT-BTN.png)
+The adding tasks feature allows users to add their own tasks to their task list. This is acheived by the user clicking on the 'Add Task +' button or by pressing the 'Enter' key on their keyboard.
 
 ### Removing Tasks
 
