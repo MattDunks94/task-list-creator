@@ -73,13 +73,13 @@ When this 'Add Task +' button is clicked, it'll append their task to their list 
 
 ### Created Task Row
 ![](documentation/README-images/TASK-ROW.png)
-Once the user has created a task, it is appended, along with other features, in it's own 'task row'. A created task row consists of the following features:<br>
-- Task Name
-- Up Button
-- Important Button
-- Down Button
-- Done Button
-- Remove Button
+Once the user has created a task, it is appended, along with other features, in it's own 'task row'. A created task row consists of 4 columns that include the following features:<br>
+- Task Name (1st Column)
+- Up Button (2nd Column)
+- Important Button (2nd Column)
+- Down Button (2nd Column)
+- Done Button (3rd Column)
+- Remove Button (4th Column)
 
 ### Rearrange Tasks
 This feature allows user's to rearrange their tasks within their list. The user can achieve this by simply clicking on either the up or down buttons, which are displayed in the second column within the [Created Task Row](#created-task-row).<br>
