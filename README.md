@@ -73,12 +73,19 @@ When this 'Add Task +' button is clicked, it'll append their task to their list 
 
 ### Created Task Row
 ![](documentation/README-images/TASK-ROW.png)
+Once the user has created a task, it is appended, along with other features, in it's own 'task row'. A created task row consists of the following features:<br>
+- Task Name
+- Up Button
+- Important Button
+- Down Button
+- Done Button
+- Remove Button
 
-#### Removing Tasks
+#### - Rearrange Tasks
 
-#### Assigning Tasks
+#### - Assigning Tasks
 
-#### Rearrange Tasks
+#### - Removing Tasks
 
 ### Save List
 
