@@ -81,11 +81,11 @@ Once the user has created a task, it is appended, along with other features, in 
 - Done Button
 - Remove Button
 
-#### - Rearrange Tasks
+### Rearrange Tasks
 
-#### - Assigning Tasks
+### Assigning Tasks
 
-#### - Removing Tasks
+### Removing Tasks
 
 ### Save List
 
