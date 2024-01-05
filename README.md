@@ -72,7 +72,7 @@ The adding tasks feature allows users to add their own tasks to their task list.
 When this 'Add Task +' button is clicked, it'll append their task to their list below this feature but only if they've typed a task in the input element (see [Alerts](#alerts) for more info). Alternatively, the user can press the 'Enter' key on their keyboard, instead of clicking the button, to carry out the same operation.
 
 ### Created Task Row
-![](documentation/README-images/TASK-ROW2.png)
+![](documentation/README-images/CREATED-TASK-ROW.png)
 Once the user has created a task, it is appended, along with other features, in it's own 'task row'. A created task row consists of 4 columns that include the following features:<br>
 - Task Name (1st Column)
 - Up Button (2nd Column)
