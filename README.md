@@ -17,7 +17,7 @@
     - [Adding Tasks](#adding-tasks)
     - [Created Task Row](#created-task-row)
       - [Rearrange Tasks](#rearrange-tasks)
-      - [Assigning Tasks](#assigning-tasks)
+      - [Markdown / Assign Tasks](#markdown--assign-tasks)
       - [Removing Tasks](#removing-tasks)
     - [Save List](#save-list)
     - [Load List](#load-list)
@@ -81,12 +81,21 @@ Once the user has created a task, it is appended, along with other features, in 
 - Done Button (3rd Column)
 - Remove Button (4th Column)
 
+This 'Task Row' is created using [Bootstrap V4.3 Horizontal List Group](https://getbootstrap.com/docs/4.3/components/list-group/#horizontal)
+
 ### Rearrange Tasks
 This feature allows user's to rearrange their tasks within their list. The user can achieve this by simply clicking on either the up or down buttons, which are displayed in the second column within the [Created Task Row](#created-task-row).<br>
 Clicking the up button moves the desired task up one place and clicking the down button moves the desired task down one place. Both buttons consist of [Font Awesome](https://fontawesome.com/) icons, [Square Caret Up Icon](https://fontawesome.com/icons/square-caret-up?f=classic&s=regular) for the up button and [Square Caret Down Icon](https://fontawesome.com/icons/square-caret-down?f=classic&s=regular) for the down button.<br>
 This feature is useful for arranging tasks in level of importance (top being important, bottom being less important).
 
-### Assigning Tasks
+### Markdown / Assign Tasks
+This feature gives user's the ability to markdown/assign tasks as done or important. <br>
+To markdown tasks as 'done' the user simply clicks on the 'done' button, which is displayed within the 3rd column in the [Created Task Row](#created-task-row). Once clicked, the user's created task name is highlighted with a green background, left-border and the text striked through indicating the task is done. I used [Bootstrap V4.3 Success Button](https://getbootstrap.com/docs/4.3/components/buttons/) as the 'done' button because the colour (green) visually indicates something successful and positive. 
+<details>
+    <summary>Done Task</summary>
+  
+  ![]()
+</details>
 
 ### Removing Tasks
 
