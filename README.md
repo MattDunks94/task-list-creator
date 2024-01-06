@@ -99,7 +99,8 @@ I used [Bootstrap V4.3 Success Button](https://getbootstrap.com/docs/4.3/compone
   ![](documentation/README-images/DONE-TASK.png)
 </details>
 
-To assign a task as 'important' the user clicks the 'i' button, which is displayed within the 2nd column in the [Created Task Row](#created-task-row), between the up and down buttons, and is also a toggle feature. Once clicked, the user's created task name is highlighted with a trasparent red background, solid red left-border and red text colour. Being a toggled feature, when clicked again these highlighted effects are removed from the created task name element. 
+To assign a task as 'important' the user clicks the 'i' button, which is displayed within the 2nd column in the [Created Task Row](#created-task-row), between the up and down buttons, and is also a toggle feature. Once clicked, the user's created task name is highlighted with a trasparent red background, solid red left-border and red text colour. This button click also disables the 'Remove' button, this avoids an important task from being removed by accident.<br>
+Being a toggled feature, when clicked again these highlighted effects are removed from the created task name element and the 'Remove' buttons functionality is reinstated. 
 <br>
 This button consists of [Font Awesome's Circle Exclamation Icon](https://fontawesome.com/icons/circle-exclamation?f=classic&s=solid) in white and styled with a  transparent red background, but when clicked it is then styled in a solid red indicating the button has been clicked. I decided to style this button in red because red indicates a sense of importance, urgency. 
 
