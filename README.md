@@ -89,14 +89,24 @@ Clicking the up button moves the desired task up one place and clicking the down
 This feature is useful for arranging tasks in level of importance (top being important, bottom being less important).
 
 ### Markdown / Assign Tasks
-This feature gives user's the ability to markdown/assign tasks as done or important. <br>
+This feature gives user's the ability to markdown/assign tasks as 'done' or 'important'. <br>
 
-To markdown tasks as 'done' the user simply clicks on the 'done' button, which is displayed within the 3rd column in the [Created Task Row](#created-task-row) and is a toggle feature. Once clicked, the user's created task name is highlighted with a green background, left-border and the text striked through indicating the task is done. Being a toggled feature, when clicked again these highlighted effects are removed from the created task name element.<br>
-I used [Bootstrap V4.3 Success Button](https://getbootstrap.com/docs/4.3/components/buttons/) as the 'done' button because the colour (green) visually indicates something successful, positive and adding a striked through effect on the task name text creates a checklist feel. 
+To markdown tasks as 'done' the user simply clicks on the 'done' button, which is displayed within the 3rd column in the [Created Task Row](#created-task-row) and is a toggle feature. Once clicked, the user's created task name is highlighted with a trasparent green background, solid green left-border and the text striked through indicating the task is done. Being a toggled feature, when clicked again these highlighted effects are removed from the created task name element.<br>
+I used [Bootstrap V4.3 Success Button](https://getbootstrap.com/docs/4.3/components/buttons/) as the 'done' button because the colour (green) visually indicates something successful, positive and adding a striked through style on the task name text creates a checklist effect. 
 <details>
-    <summary>Done Task</summary>
+    <summary>Done Task Markdown</summary>
   
   ![](documentation/README-images/DONE-TASK.png)
+</details>
+
+To assign a task as 'important' the user clicks the 'i' button, which is displayed within the 2nd column in the [Created Task Row](#created-task-row), between the up and down buttons, and is also a toggle feature. Once clicked, the user's created task name is highlighted with a trasparent red background, solid red left-border and red text colour. Being a toggled feature, when clicked again these highlighted effects are removed from the created task name element. 
+<br>
+This button consists of [Font Awesome's Circle Exclamation Icon](https://fontawesome.com/icons/circle-exclamation?f=classic&s=solid) in white and styled with a  transparent red background, but when clicked it is then styled in a solid red indicating the button has been clicked. I decided to style this button in red because red indicates a sense of importance, urgency. 
+
+<details>
+    <summary>Assigned Important Task</summary>
+  
+  ![](documentation/README-images/IMPORTANT-TASK.png)
 </details>
 
 ### Removing Tasks
