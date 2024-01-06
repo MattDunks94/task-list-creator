@@ -91,8 +91,8 @@ This feature is useful for arranging tasks in level of importance (top being imp
 ### Markdown / Assign Tasks
 This feature gives user's the ability to markdown/assign tasks as 'done' or 'important'. <br>
 
-To markdown tasks as 'done' the user simply clicks on the 'done' button, which is displayed within the 3rd column in the [Created Task Row](#created-task-row) and is a toggle feature. Once clicked, the user's created task name is highlighted with a trasparent green background, solid green left-border and the text striked through indicating the task is done. Being a toggled feature, when clicked again these highlighted effects are removed from the created task name element.<br>
-I used [Bootstrap V4.3 Success Button](https://getbootstrap.com/docs/4.3/components/buttons/) as the 'done' button because the colour (green) visually indicates something successful, positive and adding a striked through style on the task name text creates a checklist effect. 
+To markdown tasks as 'done' the user simply clicks on the 'Done' button, which is displayed within the 3rd column in the [Created Task Row](#created-task-row) and is a toggle feature. Once clicked, the user's created task name is highlighted with a trasparent green background, solid green left-border and the text striked through indicating the task is done. Being a toggled feature, when clicked again these highlighted effects are removed from the created task name element.<br>
+I used [Bootstrap V4.3 Success Button](https://getbootstrap.com/docs/4.3/components/buttons/) as the 'Done' button because the colour (green) visually indicates something successful, positive and adding a striked through style on the task name text creates a checklist effect. 
 <details>
     <summary>Done Task Markdown</summary>
   
