@@ -20,10 +20,10 @@
       - [Markdown / Assign Tasks](#markdown--assign-tasks)
       - [Removing Tasks](#removing-tasks)
     - [Task Counter](#task-counter)
-    - [Save, Load & Clear Dropdown](#save--load--clear-dropdown)
-    - [Save List](#save-list)
-    - [Load List](#load-list)
-    - [Clear List](#clear-list)
+    - [Settings Dropdown](#settings-dropdown)
+      - [Save List](#save-list)
+      - [Load List](#load-list)
+      - [Clear List](#clear-list)
     - [Alerts](#alerts)
 - [Testing](#testing)
   - [HTML Validation](#html-validation)
@@ -121,12 +121,22 @@ The Task Counter feature keeps count of the number of existing tasks. Everytime 
 
 ### Save, Load & Clear Dropdown
 ![](documentation/README-images/SAVE:LOAD-DROPDOWN.png)
+This dropdown contains 3 features:
+- Save Task List
+- Load Saved Task List
+- Clear Task List
+
+These features are accessible via [Font Awesome's Gears Icon](https://fontawesome.com/icons/gears?f=classic&s=solid) which is displayed in the top right corner of a device screen. When clicked [Bootstrap V4.3 Dropleft Dropdown Component](https://getbootstrap.com/docs/4.3/components/dropdowns/) is revealed consisting of the following 3 features:
 
 #### Save List
+If the user wants to save their created task list they can do by clicking on the 'Save' button. This feature saves the user's task list to the [Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), meaning their list is accessible even when closing the app/window.<br>
+This button is a [Bootstrap V4.3 Primary Button](https://getbootstrap.com/docs/4.3/components/buttons/) and consists of [Font Awesome's Floppy Disk Icon](https://fontawesome.com/icons/floppy-disk?f=classic&s=solid). 
 
 #### Load List
+If the user has a saved task list, they can then load their list via the 'Load' button. This feature, when clicked, renders the user's saved task items, in the order the tasks were created, to the DOM. This button is a [Bootstrap V4.3 Secondary Button](https://getbootstrap.com/docs/4.3/components/buttons/), as it is the second item in the [Settings Dropdown](#settings-dropdown), and includes [Font Awesome's File Arrow Up Icon](https://fontawesome.com/icons/file-arrow-up?f=classic&s=solid). 
 
 #### Clear List
+If the user wants to remove all tasks and start a new list they can achieve this by clicking on the 'Clear' button, which is the 3rd item in the [Settings Dropdown](#settings-dropdown). When clicked, the users task list is deleted, not just from the DOM but also from local storage meaning they cannot reload their recently deleted list. This button is a [Bootstrap V4.3 Danger Button](https://getbootstrap.com/docs/4.3/components/buttons/) and has [Font Awesome's Trash Icon](https://fontawesome.com/icons/trash?f=classic&s=solid). 
 
 #### Alerts
 
