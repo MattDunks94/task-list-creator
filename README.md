@@ -20,6 +20,7 @@
       - [Markdown / Assign Tasks](#markdown--assign-tasks)
       - [Removing Tasks](#removing-tasks)
     - [Task Counter](#task-counter)
+    - [Save, Load & Clear Dropdown](#save--load--clear-dropdown)
     - [Save List](#save-list)
     - [Load List](#load-list)
     - [Clear List](#clear-list)
@@ -82,7 +83,7 @@ Once the user has created a task, it is appended, along with other features, in 
 - Done Button (3rd Column)
 - Remove Button (4th Column)
 
-This 'Task Row' is created using [Bootstrap V4.3 Horizontal List Group](https://getbootstrap.com/docs/4.3/components/list-group/#horizontal)
+This 'Task Row' is created using [Bootstrap V4.3 Horizontal List Group](https://getbootstrap.com/docs/4.3/components/list-group/#horizontal).
 
 ### Rearrange Tasks
 This feature allows user's to rearrange their tasks within their list. The user can achieve this by simply clicking on either the up or down buttons, which are displayed in the second column within the [Created Task Row](#created-task-row).<br>
@@ -115,14 +116,19 @@ This button consists of [Font Awesome's Circle Exclamation Icon](https://fontawe
 This feature allows the user to remove any unwanted or completed tasks. The user can achieve this by clicking on the 'Remove' button, displayed within the 4th column in the [Created Task Row](#created-task-row). I used [Bootstrap V4.3 Danger Button](https://getbootstrap.com/docs/4.3/components/buttons/) as the 'Remove' button because of the colour of the button being red which indicates danger, warning. 
 
 ### Task Counter
+![](documentation/README-images/TASK-COUNTER.png)
+The Task Counter feature keeps count of the number of existing tasks. Everytime the user adds a task the counter increments, everytime the user removes a task the counter decrements. 
 
-### Save List
+### Save, Load & Clear Dropdown
+![](documentation/README-images/SAVE:LOAD-DROPDOWN.png)
 
-### Load List
+#### Save List
 
-### Clear List
+#### Load List
 
-### Alerts
+#### Clear List
+
+#### Alerts
 
 ## Testing
 ### HTML Validation
