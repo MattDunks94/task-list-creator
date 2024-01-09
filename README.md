@@ -119,8 +119,8 @@ This feature allows the user to remove any unwanted or completed tasks. The user
 ![](documentation/README-images/TASK-COUNTER.png)
 The Task Counter feature keeps count of the number of existing tasks. Everytime the user adds a task the counter increments, everytime the user removes a task the counter decrements. 
 
-### Save, Load & Clear Dropdown
-![](documentation/README-images/SAVE:LOAD-DROPDOWN.png)
+### Settings Dropdown
+![](documentation/README-images/SAVE:LOAD-DROPDOWN.png)<br>
 This dropdown contains 3 features:
 - Save Task List
 - Load Saved Task List
