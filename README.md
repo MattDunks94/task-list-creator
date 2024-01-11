@@ -25,6 +25,7 @@
       - [Load List](#load-list)
       - [Clear List](#clear-list)
     - [Alerts](#alerts)
+    - [Top of List Button](#top-of-list-button)
 - [Testing](#testing)
   - [HTML Validation](#html-validation)
   - [CSS Validation](#css-validation)
@@ -116,7 +117,7 @@ This button consists of [Font Awesome's Circle Exclamation Icon](https://fontawe
 This feature allows the user to remove any unwanted or completed tasks. The user can achieve this by clicking on the 'Remove' button, displayed within the 4th column in the [Created Task Row](#created-task-row). I used [Bootstrap V4.3 Danger Button](https://getbootstrap.com/docs/4.3/components/buttons/) as the 'Remove' button because of the colour of the button being red which indicates danger, warning. 
 
 ### Task Counter
-![](documentation/README-images/TASK-COUNTER.png)
+![](documentation/README-images/TASK-COUNTER.png)<br>
 The Task Counter feature keeps count of the number of existing tasks. Everytime the user adds a task the counter increments, everytime the user removes a task the counter decrements. 
 
 ### Settings Dropdown
