@@ -45,6 +45,16 @@
 ## User Experience (UX)
 
 ### User Stories
+1. Add Tasks: As a user I can add tasks so that I can create a task list.
+2. Remove Tasks: As a user I can remove tasks so that I can remove completed or unwanted tasks from task list.
+3. Completed Task Markdown: As a user I can markdown completed tasks so that I can visually see what tasks have been completed.
+4. Important Task Markdown: As a user I can markdown important tasks so that I can visually see what tasks are important.
+5. Modify Tasks Order Via Up and Down Buttons: As a user I can modify my tasks order via up and down buttons so that I can place tasks in desired order.
+6. View App Features and/or Instructions: As a user I can get help/assistance via navigation bar so that I know how to operate the application.
+7. Save Task List: As a user I can save my task list so that I can add/edit/view my list at a later time.
+8. Load Task List: As a user I can load my task list so that I can continue to add, edit and view my tasks after closing/reopening application.
+9. Avoid Duplicates: As a user I can visually see whether I've added a duplicate so that I don't add the same task more than once.
+10. View Task Total: As a user I can visibly see the total amount of tasks so that I know how many tasks to carry out.
 
 ### Design
 #### - Mockup Diagrams:
