@@ -168,6 +168,12 @@ There are several alerts within this app. Alerts are displayed when the user ope
 
 All alerts use [Bootstrap V4.3 Alerts Component](https://getbootstrap.com/docs/4.3/components/alerts/) and are displayed at the top of the DOM. 
 
+### Top of List Button
+![](documentation/README-images/BTT-BTN.png)<br>
+If the user has added several tasks, so many that they have to scroll down to reveal all their tasks, a 'Top of List' button appears underneath their list.
+When the user scrolls down to a certain point the 'Top of List' button appears and when clicked it disappears and takes the user to the top of their task list.
+This button is a [Bootstrap V4.3 Button](https://getbootstrap.com/docs/4.3/components/buttons/) and is modified in the style.css file. 
+
 ## Testing
 ### HTML Validation
 I used [W3C Markup Validation Service](https://validator.w3.org/) to test all HTML files.
@@ -227,10 +233,15 @@ I used [Google Chrome DevTools Lighthouse](https://developer.chrome.com/docs/lig
 </details>
 
 ## Deployment
+I used [GitHub Pages](https://pages.github.com/) for the deployment process.
 
 ## Features for the Future
+- When saving task list and loading it, it renders the tasks in the order they were added. If user previously assigned important, done tasks and/or adjusted the order of their tasks, when loading their list these assingments and adjustments are lost. New feature would include saving these task assignments and order allowing the user to load their list the way they left it, if modified.<br>  
+- The ability to save and load multiple task lists. 
 
 ## Bugs & Errors
+- There's an issue where the 'Done' & 'Remove' buttons did not change size when changing between device screens. This happens when you add tasks in one device screen size, then add a new task and then resize to a larger device screen size. The newly added tasks have larger 'Done' & 'Remove' buttons within it's [Created Task Row](#created-task-row). I only encountered this issue when switching between device screens using Developer Tools, not on actual devices. 
+![](documentation/README-images/LRG-BTN-BUG.png)
 
 ## Technologies Used
 
@@ -241,4 +252,4 @@ I used [Google Chrome DevTools Lighthouse](https://developer.chrome.com/docs/lig
 
 ### Code 
 ### Media 
-### Inspiration
+
