@@ -45,6 +45,7 @@
 ## User Experience (UX)
 
 ### User Stories
+
 ### Design
 #### - Mockup Diagrams:
 #### - Colour Palette:
@@ -241,16 +242,35 @@ I used [GitHub Pages](https://pages.github.com/) for the deployment process.
 - The ability to save and load multiple task lists. 
 
 ## Bugs & Errors
-- There's an issue where the 'Done' & 'Remove' buttons did not change size when changing between device screens. This happens when you add tasks in one device screen size, then add a new task and then resize to a larger device screen size. The newly added tasks have larger 'Done' & 'Remove' buttons within it's [Created Task Row](#created-task-row). I only encountered this issue when switching between device screens using Developer Tools, not on actual devices. 
+- There's an issue where the 'Done' & 'Remove' buttons did not change size when changing between device screens. This happens when you add tasks in one device screen size, then add a new task and then resize to a larger device screen size. The newly added tasks have larger 'Done' & 'Remove' buttons within it's [Created Task Row](#created-task-row). I only encountered this bug when switching between device screens using Developer Tools, not on actual devices. 
 ![](documentation/README-images/LRG-BTN-BUG.png)
 
 ## Technologies Used
 
 ### Languages Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+- 
 ### Frameworks, Libraries & Programs Used
+- [Bootstrap V4.3](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+  - Bootstrap framework is used for styling, structuring and reponsive development.
+- [Font Awesome](https://fontawesome.com/)
+  - Fontawesome was used to add icons to several button elements.
+- [Google Fonts](https://fonts.google.com/)
+  - Google fonts was used to import the 'Courier Prime' font.   
+- [Git](https://git-scm.com/)
+  - Git was used for version control and using the Gitpod terminal to commit and push to GitHub. 
+- [GitHub](https://github.com/)
+  - GitHub is used to store the projects code after being pushed from Git. 
+- [Pixelmator](https://www.pixelmator.com/pro/)
+  - I used Pixelmator to edit the background image. 
 
 ## Credits
 
 ### Code 
+- I got some code off from [StackOverFlow.com](https://stackoverflow.com/).
+
 ### Media 
+- The background image is from [Unsplash.com](https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bm90ZXBhZHxlbnwwfHwwfHx8MA%3D%3D).
 
