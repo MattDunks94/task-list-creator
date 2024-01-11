@@ -138,7 +138,35 @@ If the user has a saved task list, they can then load their list via the 'Load' 
 #### Clear List
 If the user wants to remove all tasks and start a new list they can achieve this by clicking on the 'Clear' button, which is the 3rd item in the [Settings Dropdown](#settings-dropdown). When clicked, the users task list is deleted, not just from the DOM but also from local storage meaning they cannot reload their recently deleted list. This button is a [Bootstrap V4.3 Danger Button](https://getbootstrap.com/docs/4.3/components/buttons/) and has [Font Awesome's Trash Icon](https://fontawesome.com/icons/trash?f=classic&s=solid). 
 
-#### Alerts
+### Alerts
+There are several alerts within this app. Alerts are displayed when the user operates a feature. These operations include:
+<details>
+    <summary>- Saving Task List (Success Alert)</summary>
+  
+  ![](documentation/README-images/SAVED-LIST-ALERT.png)
+</details>
+<details>
+  <summary>- Load Save Task List (Success Alert)</summary>
+
+  ![](documentation/README-images/LOADED-LIST-ALERT.png)
+</details>
+<details>
+  <summary>- Clearing Task List (Success Alert)</summary>
+
+  ![](documentation/README-images/CLEARED-LIST-ALERT.png)
+</details>
+<details>
+  <summary>- Attempt to add task when input is empty (Info Alert)</summary>
+
+  ![](documentation/README-images/NO-TASK-ALERT.png)
+</details>
+<details>
+  <summary>- Attempt to add task that already exists (Warning Alert)</summary>
+
+  ![](documentation/README-images/TASK-EXISTS-ALERT.png)
+</details>
+
+All alerts use [Bootstrap V4.3 Alerts Component](https://getbootstrap.com/docs/4.3/components/alerts/) and are displayed at the top of the DOM. 
 
 ## Testing
 ### HTML Validation
